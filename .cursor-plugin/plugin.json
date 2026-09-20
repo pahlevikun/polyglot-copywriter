@@ -1,0 +1,23 @@
+{
+  "name": "polyglot-copywriter",
+  "displayName": "Polyglot Copywriter",
+  "description": "Multilingual copywriter with dialect overlays: humanize, rewrite, and draft natural copy in 97 real languages with anti-slop prose.",
+  "version": "1.0.0",
+  "author": {
+    "name": "pahlevikun"
+  },
+  "homepage": "https://github.com/pahlevikun/polyglot-copywriter",
+  "repository": "https://github.com/pahlevikun/polyglot-copywriter",
+  "license": "MIT",
+  "logo": "./assets/profile.svg",
+  "keywords": [
+    "copywriter",
+    "multilingual",
+    "humanize",
+    "dialect",
+    "marketing",
+    "anti-slop"
+  ],
+  "category": "productivity",
+  "skills": "./"
+}

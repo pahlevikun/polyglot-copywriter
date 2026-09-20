@@ -1,3 +1,5 @@
+![Polyglot Copywriter](assets/polyglot-copywriter-banner.svg)
+
 # Polyglot Copywriter
 
 **Multilingual copywriter with dialect overlays: humanize, rewrite, and draft natural copy in 97 real languages.**
@@ -6,11 +8,46 @@ Registry-driven routing loads only the language pack, regional overlay, and use-
 
 ## Install
 
-Install from the [skills.sh directory](https://skills.sh) (or any compatible agent-skills CLI):
+### 1. skills.sh (recommended)
 
 ```bash
 npx skills add pahlevikun/polyglot-copywriter
 ```
+
+Listed on [skills.sh](https://skills.sh/pahlevikun/polyglot-copywriter) when install telemetry indexes the repo.
+
+### 2. Cursor plugin marketplace
+
+```bash
+agent plugin marketplace add https://github.com/pahlevikun/polyglot-copywriter
+```
+
+Then **Customize → Polyglot Copywriter → Install** (project or user scope).
+
+### 3. Claude Code plugin
+
+```text
+/plugin marketplace add https://github.com/pahlevikun/polyglot-copywriter
+/plugin install polyglot-copywriter@polyglot-copywriter
+```
+
+### 4. Codex plugin
+
+```bash
+codex plugin marketplace add pahlevikun/polyglot-copywriter
+codex plugin add polyglot-copywriter@polyglot-copywriter
+```
+
+### Where skills live
+
+| Agent | Project path |
+|-------|----------------|
+| Cursor | `.cursor/skills/polyglot-copywriter/` |
+| Claude Code | `.claude/skills/polyglot-copywriter/` |
+| Codex | `.codex/skills/polyglot-copywriter/` |
+| OpenCode | `.opencode/skills/polyglot-copywriter/` |
+
+PromptScript does not support global `-g` installs; use project scope or symlink the skill into your agent config directory.
 
 ## What it does
 
@@ -179,6 +216,14 @@ polyglot-copywriter/
 ├── CONTRIBUTING.md
 ├── SKILL.md
 ├── LICENSE
+├── plugin.json
+├── assets/
+│   ├── polyglot-copywriter-banner.svg
+│   └── profile.svg
+├── .cursor-plugin/plugin.json
+├── .claude-plugin/marketplace.json
+├── .codex-plugin/plugin.json
+├── .agents/plugins/marketplace.json
 ├── references/
 │   ├── registry.json
 │   ├── fictional-catalog.json

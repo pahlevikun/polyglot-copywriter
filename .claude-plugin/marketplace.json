@@ -1,0 +1,15 @@
+{
+  "name": "polyglot-copywriter",
+  "description": "Multilingual copywriter with dialect overlays and anti-slop prose for 97 real languages.",
+  "owner": {
+    "name": "pahlevikun"
+  },
+  "plugins": [
+    {
+      "name": "polyglot-copywriter",
+      "source": "./",
+      "version": "1.0.0",
+      "description": "Humanize, rewrite, and draft marketing, email, chat, and incident copy in 97 languages with 163 dialect overlays."
+    }
+  ]
+}

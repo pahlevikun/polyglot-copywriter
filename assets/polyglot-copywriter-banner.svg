@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Polyglot Copywriter">
+  <defs>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2DD4BF"/>
+      <stop offset="100%" stop-color="#0D9488"/>
+    </linearGradient>
+  </defs>
+  <rect x="0.5" y="0.5" width="1199" height="319" rx="24" fill="#13161B" stroke="#F8FAFC" stroke-opacity="0.1"/>
+  <g transform="translate(48 64)">
+    <circle cx="72" cy="96" r="68" fill="none" stroke="url(#accent)" stroke-width="6"/>
+    <ellipse cx="72" cy="96" rx="68" ry="24" fill="none" stroke="#F8FAFC" stroke-opacity="0.35" stroke-width="3"/>
+    <path d="M72 28v136M4 96h136" stroke="#F8FAFC" stroke-opacity="0.2" stroke-width="2"/>
+    <path d="M118 118 L168 168 L148 188 L98 138 Z" fill="url(#accent)"/>
+    <path d="M168 168 L188 148 L198 158 L178 178 Z" fill="#F8FAFC" fill-opacity="0.85"/>
+    <line x1="98" y1="138" x2="168" y2="168" stroke="#13161B" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <text x="280" y="148" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="64" font-weight="700" letter-spacing="-1.5" fill="#F8FAFC">Polyglot Copywriter</text>
+  <text x="282" y="210" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="500" fill="#94A3B8">97 languages · dialect overlays · anti-slop copy</text>
+  <rect x="280" y="236" width="220" height="6" rx="3" fill="url(#accent)" opacity="0.9"/>
+</svg>

@@ -1,0 +1,19 @@
+{
+  "name": "polyglot-copywriter",
+  "interface": {
+    "displayName": "Polyglot Copywriter"
+  },
+  "plugins": [
+    {
+      "name": "polyglot-copywriter",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
