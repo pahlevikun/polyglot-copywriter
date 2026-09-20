@@ -11,18 +11,12 @@ Install with [skills.sh](https://skills.sh) (or any compatible agent-skills CLI)
 ##### NPM
 
 ```bash
-# Monorepo path — replace <owner>/<repo> with your TeamHarness fork
-npx skills add <owner>/<repo>/bundle/skills/builtin/polyglot-copywriter
-
-# Standalone repo
 npx skills add farhanpahlevi/polyglot-copywriter
 ```
 
 ##### pnpm
 
 ```bash
-pnpm dlx skills add <owner>/<repo>/bundle/skills/builtin/polyglot-copywriter
-# or
 pnpm dlx skills add farhanpahlevi/polyglot-copywriter
 ```
 
@@ -361,7 +355,7 @@ Every language row must pass schema checks and link integrity before merge (`val
 From the skill root:
 
 ```bash
-cd bundle/skills/builtin/polyglot-copywriter   # monorepo path, or your cloned skill root
+cd polyglot-copywriter   # or your cloned skill root
 python3 scripts/validate_skill.py
 python3 -m unittest discover -s tests -q
 python3 scripts/evaluate_output.py <case-id> <output-file>
