@@ -21,6 +21,7 @@ Full routing: [core.md](../core.md) § Technique routing.
 |---|---|
 | [marketing-copy.md](marketing-copy.md) | Use case `marketing`, `ads`, `social` |
 | [humanize-workflow.md](humanize-workflow.md) | Use case `humanize` or de-AI request |
+| [flow-by-relation.md](flow-by-relation.md) | List-like sections, weak hinges, staccato contrast review |
 | [natural-writing.md](natural-writing.md) | Any rewrite — calque, stiff prose |
 | [translation-vs-voice.md](translation-vs-voice.md) | Translate/localize across languages |
 
@@ -52,7 +53,8 @@ Stub: [jp-marketing.md](jp-marketing.md) → [locales/japanese.md#marketing](loc
 | incident | incident-comms | same |
 | docs / technical-doc | docs-prose | same |
 | academic | academic-writing | same |
-| humanize | humanize-workflow | optional locale for calque patterns |
+| humanize | humanize-workflow | optional locale for calque; flow-by-relation when list-like |
+| review (development weak) | flow-by-relation | substance + review-prose |
 | any rewrite | natural-writing | optional locale |
 
 Indonesian Farhan voice: [core.md](../core.md) + [voice-fingerprint.md](../voice-fingerprint.md). `english` locale supplements overlay packs; Farhan fingerprint still applies to English by default.

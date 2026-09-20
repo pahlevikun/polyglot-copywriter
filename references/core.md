@@ -85,6 +85,7 @@ Full index: [techniques/README.md](techniques/README.md) · [techniques/index.js
 | Use case `docs` or `technical-doc` | [techniques/docs-prose.md](techniques/docs-prose.md) |
 | Use case `academic` | [techniques/academic-writing.md](techniques/academic-writing.md) |
 | Use case `humanize` or user asks to de-AI / humanize | [techniques/humanize-workflow.md](techniques/humanize-workflow.md) |
+| Paragraphs list-like, weak hinges, or decorative staccato closers | [techniques/flow-by-relation.md](techniques/flow-by-relation.md) |
 | Any rewrite — stiff, unnatural, calque | [techniques/natural-writing.md](techniques/natural-writing.md) |
 | User asks to translate or localize across languages | [techniques/translation-vs-voice.md](techniques/translation-vs-voice.md) |
 

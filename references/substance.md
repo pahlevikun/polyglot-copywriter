@@ -46,7 +46,9 @@ Fix in this order. Stop when the request is met.
 
 1. Truth and scope (protected artifacts, attribution, uncertainty)
 2. Substance (source only this author or this incident supplied)
-3. Development (paragraphs connect by cause, contrast, sequence, example)
+3. Development (paragraphs connect by cause, contrast, sequence, example —
+   when sections read like a list, add hinge sentences per
+   [flow-by-relation.md](techniques/flow-by-relation.md))
 4. Sentences (anti-slop + simple-prose)
 5. Craft (restore warmth the source already had; do not perform humanness)
 

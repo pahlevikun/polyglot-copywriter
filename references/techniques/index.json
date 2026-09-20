@@ -24,6 +24,17 @@
       "file": "references/techniques/humanize-workflow.md"
     },
     {
+      "id": "flow-by-relation",
+      "languages": [
+        "*"
+      ],
+      "usecases": [
+        "*"
+      ],
+      "file": "references/techniques/flow-by-relation.md",
+      "note": "Also load on review when development/flow breaks; humanize when list-like"
+    },
+    {
       "id": "natural-writing",
       "languages": [
         "*"
