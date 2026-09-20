@@ -67,9 +67,24 @@ Agents run this mentally on important drafts; users only see scores when they as
 
 **Informal bands:** 85+ ship with spot-check; 70–84 one more pass on worst axis; below 70 rework lead and thin clusters.
 
-**Humanize / rewrite tasks:** also run [techniques/humanize-workflow.md](techniques/humanize-workflow.md) verify step (read aloud; portability test; no invented facts).
+**Humanize / rewrite tasks:** also run [techniques/humanize-workflow.md](techniques/humanize-workflow.md) verify step (read aloud; portability test; no invented facts; survivor tells; rewrite self-check).
+
+**Review / development tasks:** when paragraphs read list-like, also apply [techniques/flow-by-relation.md](techniques/flow-by-relation.md).
 
 **Marketing tasks:** also check [techniques/marketing-copy.md](techniques/marketing-copy.md) checklist (one primary CTA, proof from user only).
+
+### Graded dimensions (human review helper)
+
+For high-stakes rewrite or review evals, reviewers may score optional axes on 1–5 (documentation only — not a CI gate):
+
+| Dimension | Question |
+|---|---|
+| **Specificity** | Does the output name actors, mechanisms, limits, or carriers? |
+| **Relation-clarity** | Are hinges and contrasts earned, not decorative? |
+| **Evidence fit** | Do claims stay within source attribution and scope? |
+| **Restraint** | Did the agent avoid over-editing earned patterns? |
+
+Record scores in manual eval notes; do not block `validate_skill.py` on them.
 
 ## Simple prose self-check (before delivery)
 

@@ -456,6 +456,13 @@ flowchart TD
 - [Write Like You Talk](https://www.paulgraham.com/talk.html) and [Writing, Briefly](https://www.paulgraham.com/writing44.html), Paul Graham.
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup.
 
+## Related projects
+
+- [Clarity](https://github.com/addyosmani/clarity) — substance-before-surface operating system (interview / rewrite / review, `[TK:]`, provenance); English essay skill this one adapted ideas from, without vendoring
+- [adewale/anti-slop-writing](https://github.com/adewale/anti-slop-writing) — mechanism-first EN prose editor (flow-by-relation, earned antithesis, rewrite self-check); polyglot adds multilingual registry + earned-pattern evals, not hillclimb eval infra
+- [hardikpandya/stop-slop](https://github.com/hardikpandya/stop-slop) — pattern-focused slop detection (surface rhythm); polyglot does not import blanket bans or numeric score gates
+- [blader/humanizer](https://github.com/blader/humanizer) — humanizer v3 pattern tiers + show-work workflow; canonical patterns live in `anti-slop-prose.md`; EN extended library in `english-humanizer.md`
+
 ## License
 
 MIT — Copyright (c) 2026 Farhan Pahlevi. See [LICENSE](LICENSE).

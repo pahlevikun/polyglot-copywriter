@@ -66,6 +66,15 @@ Mode-boundary and fidelity cases belong in `evals/cases.json` with optional
 `mode_boundary` | `instruction_integrity`). Put semantic rules in
 `human_review`; keep `checks` automatically verifiable.
 
+**`category: false_positive`** — cases that must **not** be over-edited:
+earned triads, academic hedges, intentional quotes of slop phrases,
+`robust` with mechanism, earned passive/adverb/Wh-opener, earned antithesis.
+These guard against blanket bans; failures mean the agent flagged or rewrote
+earned patterns. Register new false-positive ids in
+`scripts/validate_skill.py` `required_eval_ids` and
+`tests/test_eval_cases.py` `REQUIRED_INVARIANT_IDS` when they become
+release invariants.
+
 Run `python3 scripts/evaluate_output.py <case-id> <output-file>` to test a draft against automatic checks.
 
 ## Pull request expectations
