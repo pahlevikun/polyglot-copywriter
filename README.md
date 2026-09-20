@@ -62,7 +62,7 @@ So the first work is not on the page. It is deciding who you are writing for, in
 
 > Good copy is **useful**, **clear**, and **yours** — in the language the reader expects.
 
-What follows is what holds across multilingual copy, adapted from essay-writing craft and from the substance-before-surface operating system in [Clarity](https://github.com/addyosmani/clarity). The usual advice needs adjusting when the reader is an engineer on call, a customer opening email, or a teammate in Jakarta who expects `santai` prose, not a global-audience essay.
+What follows is what holds across multilingual copy, adapted from essay-writing craft and a substance-before-surface operating system (interview, rewrite, review, `[TK: …]` gaps, provenance). The usual advice needs adjusting when the reader is an engineer on call, a customer opening email, or a teammate in Jakarta who expects `santai` prose, not a global-audience essay.
 
 ---
 
@@ -245,6 +245,7 @@ polyglot-copywriter/
 ├── README.md
 ├── CONTRIBUTING.md
 ├── SKILL.md                          thin router (≤120 lines)
+├── commands/                         optional /polyglot-interview, -rewrite, -review wrappers
 ├── docs/
 │   └── 2026-09-20-clarity-substance-modes.md
 ├── references/
@@ -277,6 +278,14 @@ Lint this email against the skill rubric.
 ```
 
 `interview` co-writes from nothing, `rewrite` edits a draft or facts you already supplied, `review` gives you a critique and leaves your file alone, and `lint` runs the self-check in [`evaluation.md`](references/evaluation.md). Drop the mode word and the skill infers from what you gave it — except incident, chat, email, and docs with facts in the prompt always route to rewrite, never interview.
+
+If you prefer dedicated slash commands, copy the wrappers in `commands/`:
+
+```bash
+cp commands/*.md ~/.claude/commands/
+```
+
+That gives `/polyglot-interview`, `/polyglot-rewrite`, and `/polyglot-review` (filenames match slash names).
 
 Lookup a language id: `python3 scripts/find_language.py <name>`. Configuration axes (`register`, `regional_voice`, `speech_level`, `intensity`) are in [`configuration.md`](references/configuration.md).
 
@@ -455,13 +464,6 @@ flowchart TD
 - [The Day You Became a Better Writer](https://dilbertblog.typepad.com/the_dilbert_blog/2007/06/the_day_you_bec.html), Scott Adams.
 - [Write Like You Talk](https://www.paulgraham.com/talk.html) and [Writing, Briefly](https://www.paulgraham.com/writing44.html), Paul Graham.
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup.
-
-## Related projects
-
-- [Clarity](https://github.com/addyosmani/clarity) — substance-before-surface operating system (interview / rewrite / review, `[TK:]`, provenance); English essay skill this one adapted ideas from, without vendoring
-- [adewale/anti-slop-writing](https://github.com/adewale/anti-slop-writing) — mechanism-first EN prose editor (flow-by-relation, earned antithesis, rewrite self-check); polyglot adds multilingual registry + earned-pattern evals, not hillclimb eval infra
-- [hardikpandya/stop-slop](https://github.com/hardikpandya/stop-slop) — pattern-focused slop detection (surface rhythm); polyglot does not import blanket bans or numeric score gates
-- [blader/humanizer](https://github.com/blader/humanizer) — humanizer v3 pattern tiers + show-work workflow; canonical patterns live in `anti-slop-prose.md`; EN extended library in `english-humanizer.md`
 
 ## License
 
