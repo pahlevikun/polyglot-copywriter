@@ -5,7 +5,7 @@ Thank you for helping improve this skill. All **agent-facing** instructions must
 ## Prerequisites
 
 - Python 3.10+
-- From the skill root (repo clone or install directory):
+- From the skill root (`bundle/skills/builtin/polyglot-copywriter`):
 
 ```bash
 python3 scripts/validate_skill.py
@@ -59,6 +59,12 @@ Edit [evals/cases.json](evals/cases.json):
 - `prompt` — may stay in any language when testing detection or locale output.
 - `human_review` — English criteria for manual review.
 - `checks` — `preserve`, `require`, `forbid_patterns`, `first_paragraph_require` as needed.
+
+Mode-boundary and fidelity cases belong in `evals/cases.json` with optional
+`mode` (`interview` | `rewrite` | `review`) and `category`
+(`factual_fidelity` | `medium_fit` | `false_positive` | `authorship` |
+`mode_boundary` | `instruction_integrity`). Put semantic rules in
+`human_review`; keep `checks` automatically verifiable.
 
 Run `python3 scripts/evaluate_output.py <case-id> <output-file>` to test a draft against automatic checks.
 
