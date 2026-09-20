@@ -25,6 +25,10 @@ These guides are **peers**, not a stack where one overrides another. Apply them 
 3. **User sample is a third collaborator.** Match the sample's rhythm, punctuation habits, and markers. Still apply honesty rules (no new fabricated facts). Do not strip deliberate sample choices while thinning *unrequested* AI clustering in generated filler.
 4. **Use-case files add format.** Email, MR review, RFC, and the rest layer channel rules on top; they do not replace core, voice, or anti-slop.
 5. **Clusters, not veto.** One em dash, one "however", or one short fragment is not a failure by itself. Cross-check both files before cutting something that sounds like Farhan.
+6. **Earned patterns stay.** A concrete list of three operational checks,
+   an academic hedge the evidence requires, or a docs heading pattern is
+   not slop. Adjudicate in context ([substance.md](substance.md)). Do not
+   split, casualize, or "vary the shape" merely to look less like a model.
 
 ## Two global rules
 

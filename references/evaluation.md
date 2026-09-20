@@ -87,6 +87,14 @@ Run on chat, email, incident, and humanize drafts:
 - [ ] Scan for `—`; if more than one per ~200 words (or any in chat/incident unless quoting), split with comma, period, or colon.
 - [ ] No `fact — explanation — conclusion` chains; each idea gets its own sentence when possible.
 
+## Mode and fidelity check (before delivery)
+
+- [ ] Requested mode was performed (interview did not draft first; review did not rewrite).
+- [ ] No fact, attribution, scope, condition, quote, link, or experience drifted.
+- [ ] Hollow authored prose either has real source material or says so / uses `[TK:]`.
+- [ ] Voice sample and fingerprint changed style only.
+- [ ] Medium still works (procedures scan, emails state the ask, incidents keep impact).
+
 ## Suggested release gate
 
 - No change to untargeted protected artifacts

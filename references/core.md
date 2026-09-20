@@ -68,6 +68,9 @@ Load modular technique docs in this order (skip steps with no match):
 4. **Generic technique** — use-case or rewrite module (table below)
 5. **Locale technique** — `references/techniques/locales/<language_id>.md` when the active language has a locale file and the use case matches (see matrix)
 6. **Humanize pass** — [anti-slop-prose.md](anti-slop-prose.md) + [techniques/humanize-workflow.md](techniques/humanize-workflow.md) when humanizing
+7. **Substance** — [substance.md](substance.md) (truth, `[TK]`, least-invasive
+   edit). Load in every mode. Interview and review load extra files from
+   `SKILL.md`, not from this list.
 
 Full index: [techniques/README.md](techniques/README.md) · [techniques/index.json](techniques/index.json).
 

@@ -10,6 +10,7 @@ Load when use case is `humanize`, or user asks to de-AI, humanize, rewrite stiff
 |---|---|---|
 | **Edit** (default) | Fix a draft | Rewritten text + short "what changed" |
 | **Detect** | Audit only | Named patterns, quoted lines, fix hint — no rewrite until asked |
+| **Review** | User asked to critique / check / detect | [review-prose.md](../review-prose.md) — no file edits |
 
 If no draft, ask for one. If audience/format unclear, ask once: who is this for and where will it publish?
 
@@ -27,6 +28,10 @@ If no draft, ask for one. If audience/format unclear, ask once: who is this for 
 
 ## Core rewrite principles
 
+0. **Substance first** — follow [substance.md](../substance.md) order
+   (truth → substance → development → sentences → craft). If the draft
+   has no source material, stop and offer [interview.md](../interview.md)
+   instead of inventing color.
 1. **Preserve the writer's real voice** — Do not sterilize into generic polished prose.
 2. **Minimum effective edit** — Strong human sentences stay.
 3. **Lead with the point** when setup adds nothing; keep asides that create context or character.
@@ -78,6 +83,8 @@ For each hit:
 - **Pattern:** {name from anti-slop or table above}
 - **Quote:** "{line}"
 - **Fix:** {one-line direction}
+- **Verdict:** keep | revise | ask-author | cut
 ```
 
-Offer to run edit mode after detect.
+When the user asked for a critique, map each hit to review verdicts from
+[review-prose.md](../review-prose.md). Offer to run edit mode after detect.

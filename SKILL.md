@@ -14,7 +14,8 @@ See [README.md](README.md) for coverage counts and validation commands. Contribu
 1. [core.md](references/core.md) — language bar, artifacts, impact-first
 2. [simple-prose.md](references/simple-prose.md) — simple vocabulary and grammar default for **every** language
 3. [anti-slop-prose.md](references/anti-slop-prose.md) — AI clusters, symbol hygiene
-4. [voice-fingerprint.md](references/voice-fingerprint.md) — **only** when `language` is `english` or `indonesia`, or user asked to write as Farhan
+4. [substance.md](references/substance.md) — truth, `[TK]`, least-invasive edit (all modes)
+5. [voice-fingerprint.md](references/voice-fingerprint.md) — **only** when `language` is `english` or `indonesia`, or user asked to write as Farhan
 
 Peer guides: [configuration.md](references/configuration.md), [regional.md](references/regional.md), [language-selection.md](references/languages/language-selection.md), [evaluation.md](references/evaluation.md).
 
@@ -35,6 +36,30 @@ Lookup: `python3 scripts/find_language.py <name>`. Scaffold: `scripts/new_langua
 **Technique refs** — load order in [core.md](references/core.md) § Technique routing: language pack → overlay/profile → use-case pack → generic technique → locale technique → humanize pass. Index: [techniques/README.md](references/techniques/README.md).
 
 **Config axes** (see [configuration.md](references/configuration.md)): `register`, `regional_voice`, `speech_level`, `intensity`. One overlay at a time unless user asked for a named mix.
+
+## Mode
+
+Explicit word wins: `interview` / `write` / `draft` / `new` → co-write.
+`rewrite` / `edit` / `fix` / `humanize` → rewrite. `review` / `critique` /
+`check` → review. `lint` / `stats` → self-check in [evaluation.md](references/evaluation.md).
+
+Without a mode, infer: named draft or paste → rewrite; "check / critique"
+→ review; authored long-form with no source → interview; incident / chat /
+email / docs with facts in the prompt → rewrite. Ask once if review vs
+rewrite is genuinely ambiguous.
+
+Load only the extra reference the mode needs:
+
+```txt
+Co-write    references/interview.md
+Rewrite     references/substance.md (already in the pipeline)
+Review      references/review-prose.md
+Lint        references/evaluation.md self-check (no new script)
+```
+
+Always load [substance.md](references/substance.md) with core / simple-prose /
+anti-slop. Follow [voice-fingerprint.md](references/voice-fingerprint.md) for
+EN/ID style only — never as a source of facts.
 
 ## Step 2–4: Voice pipeline
 
