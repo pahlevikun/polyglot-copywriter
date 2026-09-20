@@ -15,6 +15,7 @@ Trust:
 Development:
 Voice:
 Ending:
+Remembered line:        (optional — one concrete line worth keeping)
 Top fixes:
 ```
 
@@ -31,8 +32,18 @@ Verdict: keep | revise | ask-author | cut
 Pattern:
 Why:
 Suggestion:
+Rewrite check:          (mandatory on suggested rewrites — see below)
 Safety check:
 ```
+
+### Rewrite check (mandatory)
+
+On every `Suggestion` or proposed rewrite, state whether your rewrite would
+trigger the same detectors you applied to the source: rule-of-three slop,
+`not X but Y` without mechanism, em-dash antithesis, staged opener, prestige
+vocabulary, meta-commentary, decorative closer, or invented facts. If your
+rewrite would be a `revise` on review, rewrite again or escalate to
+`ask-author`. If it passes, write `passes self-detectors`.
 
 ### Verdicts
 

@@ -21,7 +21,9 @@ If no draft, ask for one. If audience/format unclear, ask once: who is this for 
 2. DETECT — scan [anti-slop-prose.md](../anti-slop-prose.md) clusters + checklist below
 3. REWRITE — minimum effective edit; preserve meaning and personal markers
 4. VERIFY — re-read aloud; run quick score from [evaluation.md](../evaluation.md) § Self-check rubric
-5. DELIVER — edited draft + what changed (edit mode) or findings list (detect mode)
+5. SURVIVOR TELLS — scan the rewrite for patterns you just cut (see checklist below)
+6. REWRITE SELF-CHECK — would you flag your own rewrite under [anti-slop-prose.md](../anti-slop-prose.md)? If yes, revise again
+7. DELIVER — edited draft + what changed (edit mode) or findings list (detect mode)
 ```
 
 **Rule:** Look for **clusters**, not isolated tells. One em dash or one "however" is fine. Em dash + rule of three + empty vocabulary + generic kicker in one paragraph is a cluster.
@@ -88,3 +90,41 @@ For each hit:
 
 When the user asked for a critique, map each hit to review verdicts from
 [review-prose.md](../review-prose.md). Offer to run edit mode after detect.
+
+## Survivor tells (post-rewrite scan)
+
+After rewrite, re-scan the output for these five high-recurrence tells:
+
+- [ ] **Negative parallelism** — `not X but Y`, `not just X`, clipped `Not X. Y.` without named mechanism
+- [ ] **One-line closer** — mic-drop aphorism or pull-quote ending; flatten and test (emphasis-source)
+- [ ] **Em-dash cluster** — decorative dashes reintroduced while fixing other tells
+- [ ] **Rule of three** — forced triad where two items (or a concrete list) fit the content
+- [ ] **Bold label + punch** — `- **Label:** generic claim` or inline-header list slop
+
+If any survive, run one more minimum-effective pass or escalate to detect mode.
+
+## Rewrite self-check
+
+Before delivery, ask: **Would I flag this rewrite if it were source text?**
+
+Check your rewrite for the same detectors you used on the source: staged openers, prestige vocabulary, `not just` without mechanism, invented facts, decorative staccato, meta-commentary, copula displacement without enumeration job. If the rewrite would earn `revise` on review, fix it or mark `[TK:]` — do not ship a sterile swap of AI patterns.
+
+## Show-work output (optional)
+
+When the user pastes a long draft for humanize (not incident/chat/file-edit tasks), you may use this shape:
+
+```txt
+Flagged patterns:
+- {pattern}: "{quote}" → {fix direction}
+
+Draft rewrite:
+{minimum effective edit}
+
+Final (after survivor scan + self-check):
+{delivered text}
+
+What changed:
+- …
+```
+
+Default remains **edited draft + what changed** unless the user asked to see the intermediate steps.

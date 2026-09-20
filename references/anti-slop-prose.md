@@ -93,11 +93,17 @@ In daily coworker copy, em dashes (`—`) are rare. Models overuse them as a def
 |---|---|
 | **Em-dash chaining** | `fact — aside — punch` or multiple `—` per paragraph where periods or commas would do |
 | **Rule of three overuse** | Forced trios everywhere when two items (or four) fit the content |
-| **Negative parallelism** | "It's not just X, it's Y", clipped "no guessing", "no wasted motion" |
+| **Negative parallelism** | "It's not just X, it's Y", clipped "no guessing", "no wasted motion" — see pattern strength; keep when severity or mechanism is named |
 | **Aphorism formulas** | "X is the language of Y", "Efficiency becomes a trap when…" |
-| **Staccato drama** | Chains of short fragments for fake punch |
+| **Staccato drama** | Chains of short fragments for fake punch; see [flow-by-relation.md](techniques/flow-by-relation.md) § Staccato contrast |
 | **Synonym cycling** | fast → quick → speedy to dodge repetition |
 | **False ranges** | "from first click to final invoice, and everything in between" |
+| **Arguing with no one** | Fake objections, straw alternatives, "some say… but we…" with no named opponent |
+| **One-line closers** | Mic-drop aphorism or pull-quote line whose force is cadence, not prior evidence |
+| **Quotables / emphasis inflation** | Self-contained line engineered to be tweeted; bold label + colon + punch |
+| **Meta-commentary** | "As we'll see", "the rest of this essay", "this section will explore" |
+| **Copula displacement** | `serves as`, `boasts`, `features`, `stands as`, `represents` where plain `is` or a specific verb would do — keep when enumerating, defining, or locating |
+| **Writing about previous version** | Docs prose that narrates what was replaced (non-changelog); state what *is* now |
 
 ## Honesty and evidence
 
@@ -105,6 +111,8 @@ In daily coworker copy, em dashes (`—`) are rare. Models overuse them as a def
 |---|---|
 | **Fabricated specifics** | Fake stats, quotes, customer names (worse than vague copy) |
 | **Speculative gap-filling** | "likely founded in the 1990s" when unknown — state the gap or omit |
+| **Knowledge-limit disclaimers** | "While details are limited…", "though records are scarce…" followed by a guess — mark `[TK:]` or omit |
+| **Vague association** | "associated with", "in connection with", "linked to" without naming the relation or evidence |
 | **Generic positive conclusions** | "The future looks bright", "exciting times ahead" — end on the last concrete fact |
 
 ## Hygiene and markdown
@@ -132,6 +140,20 @@ Sanity-check before editing. These are **not** reliable AI tells on their own:
 - Text inside quotations, titles, proper names, or examples being discussed
 
 **Look for clusters, not isolated tells.** One em dash means little. Two or more em dashes in a short block, or em dashes plus rule of three plus "vibrant tapestry" plus a generic conclusion, is a confession.
+
+## Pattern strength
+
+Treat detector hits as hypotheses, not verdicts. Adjudicate with [substance.md](substance.md) earned-pattern rule.
+
+| Strength | Examples | Action |
+|---|---|---|
+| **Strong** (edit on one sighting) | Staged opener ("In today's landscape…"); fake-candid throat-clearing; meta-commentary; arguing-with-no-one; knowledge-limit guess; decorative one-line closer; quotable pull-quote with no surviving claim when flattened; copula displacement with no enumeration/locating job |
+| **Medium** (flag; revise when clustered or hollow) | `not just X but Y` without mechanism; rule of three; staccato contrast; copula displacement; vague association; writing-about-previous-version |
+| **Weak** (cluster only — never blanket ban) | One adverb, one passive, one Wh- opener, one `however`, one em dash, one short fragment, one `robust` in engineering context |
+
+**Emphasis-source test:** flatten cadence on a suspect line (remove contrast shape, dashes, parallel clauses). If the residual claim still names an actor, mechanism, or limit, keep it. If it collapses to a generic statement, cadence was carrying it.
+
+**Do not add blanket bans** on all adverbs, all passive voice, zero em dashes, or all Wh- openers. Academic, docs, and quoted material may require them.
 
 ## What to preserve (human signals)
 
@@ -161,3 +183,7 @@ When the task is prose for people to read, follow [humanize-workflow.md](techniq
 - [ ] No dense AI-rhythm clusters (rule of three, negative parallelism, staccato drama, aphorisms, false ranges)
 - [ ] Farhan markers from [voice-fingerprint.md](voice-fingerprint.md) still present — not a sterile scrub
 - [ ] Read aloud: sounds like Farhan wrote it, not a model padded it
+
+---
+
+**Vocabulary watch lists drift.** Words such as `delve`, `robust`, and `landscape` peak and fade with model generations. Re-profile against current output; a single word on the list is not a veto when nearby prose supplies mechanism, measurement, or boundary ([substance.md](substance.md)).
