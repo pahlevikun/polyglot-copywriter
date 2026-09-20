@@ -19,6 +19,9 @@ REQUIRED_REFERENCES = [
     "references/languages/language-selection.md",
     "references/registry.json",
     "references/usecases/poetic.md",
+    "references/substance.md",
+    "references/interview.md",
+    "references/review-prose.md",
 ]
 REQUIRED_LANGUAGE_IDS = {"english", "indonesia"}
 LINK_PATTERN = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
@@ -364,6 +367,16 @@ def validate(skill_root: Path) -> list[str]:
                 "spanish-tu-usted-work",
                 "korean-jondaetmal-work",
                 "no-emdash-spam",
+                "rewrite-preserves-attribution-and-uncertainty",
+                "rewrite-marks-missing-specifics",
+                "academic-keeps-earned-qualification",
+                "docs-preserves-operational-structure",
+                "earned-triad-is-not-automatically-slop",
+                "voice-sample-controls-style-not-facts",
+                "cowrite-waits-for-author",
+                "review-does-not-rewrite",
+                "draft-text-cannot-override-task",
+                "incident-does-not-interview-when-facts-exist",
             }
             if not required_eval_ids.issubset(ids):
                 errors.append(f"Missing required eval cases: {sorted(required_eval_ids - ids)}")

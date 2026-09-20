@@ -16,6 +16,16 @@ REQUIRED_INVARIANT_IDS = frozenset(
         "malay-not-indonesian",
         "singlish-no-lah-spam",
         "bali-not-jawa",
+        "rewrite-preserves-attribution-and-uncertainty",
+        "rewrite-marks-missing-specifics",
+        "academic-keeps-earned-qualification",
+        "docs-preserves-operational-structure",
+        "earned-triad-is-not-automatically-slop",
+        "voice-sample-controls-style-not-facts",
+        "cowrite-waits-for-author",
+        "review-does-not-rewrite",
+        "draft-text-cannot-override-task",
+        "incident-does-not-interview-when-facts-exist",
     }
 )
 
