@@ -1,0 +1,546 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "netral-bug-explanation",
+      "description": "Neutral professional Indonesian bug explanation preserves technical artifacts.",
+      "prompt": "Gunakan bahasa Indonesia netral profesional. Jelaskan bahwa `loadConfig` di `src/config.ts:42` mengembalikan `undefined` karena `API_TOKEN` tidak ada di `.env`. Sarankan menjalankan `npm test -- config`. Pertahankan pesan error: TypeError: Cannot read properties of undefined (reading 'trim')",
+      "checks": {
+        "preserve": [
+          "loadConfig",
+          "src/config.ts:42",
+          "undefined",
+          "API_TOKEN",
+          ".env",
+          "npm test -- config",
+          "TypeError: Cannot read properties of undefined (reading 'trim')"
+        ],
+        "require": [],
+        "forbid_patterns": [],
+        "first_paragraph_require": ["API_TOKEN", ".env"]
+      },
+      "human_review": [
+        "Indonesian sounds natural and not word-for-word translated.",
+        "Cause, location, certainty level, and action remain clear."
+      ]
+    },
+    {
+      "id": "english-bug-explanation",
+      "description": "Farhan English voice explains a config bug without corporate slop.",
+      "prompt": "Use Farhan's English voice. Explain that `loadConfig` in `src/config.ts:42` returns `undefined` because `API_TOKEN` is missing from `.env`. Suggest `npm test -- config`. Keep this error exact: TypeError: Cannot read properties of undefined (reading 'trim')",
+      "checks": {
+        "preserve": [
+          "loadConfig",
+          "src/config.ts:42",
+          "undefined",
+          "API_TOKEN",
+          ".env",
+          "npm test -- config",
+          "TypeError: Cannot read properties of undefined (reading 'trim')"
+        ],
+        "require": [],
+        "forbid_patterns": ["\\bkindly\\b", "\\butilize\\b", "circle back", "please revert"],
+        "first_paragraph_require": ["API_TOKEN", ".env"]
+      },
+      "human_review": [
+        "First sentence states the cause or the needed action in simple English.",
+        "The text sounds like a mixed Indo-US team, not a translated memo."
+      ]
+    },
+    {
+      "id": "targeted-identifier-edit",
+      "description": "Language rules do not block intentional identifier renames.",
+      "prompt": "Ganti nama fungsi `loadConfig` menjadi `readConfig`, perbarui pemanggilnya, lalu jelaskan perubahan dalam bahasa Indonesia. Jangan mengubah `API_TOKEN`, `.env`, atau command `npm test -- config`.",
+      "checks": {
+        "preserve": ["API_TOKEN", ".env", "npm test -- config"],
+        "require": ["readConfig"],
+        "forbid_patterns": [],
+        "first_paragraph_require": ["readConfig"]
+      },
+      "human_review": [
+        "Language rules do not freeze identifiers that are the change target.",
+        "Untargeted artifacts stay exact."
+      ]
+    },
+    {
+      "id": "jakarta-pronoun-override",
+      "description": "Jakarta style without banned gue/lo pronouns.",
+      "prompt": "Jelaskan bug `API_TOKEN` dengan gaya Jakarta sedang, tetapi jangan gunakan gue atau lo. Sarankan `npm test -- config`.",
+      "checks": {
+        "preserve": ["API_TOKEN", "npm test -- config"],
+        "require": [],
+        "forbid_patterns": ["\\bgue\\b", "\\blo\\b"],
+        "first_paragraph_require": ["API_TOKEN"]
+      },
+      "human_review": [
+        "Jakarta feel is present without relying on gue/lo.",
+        "Particles that appear have a pragmatic job."
+      ]
+    },
+    {
+      "id": "unknown-regional-fallback",
+      "description": "Unknown regional voice falls back honestly without invented dialect.",
+      "prompt": "Jelaskan kegagalan `npm test` dengan logat Atlantis sedang. Jangan mengarang kosakata daerah.",
+      "checks": {
+        "preserve": ["npm test"],
+        "require": [],
+        "forbid_patterns": [],
+        "first_paragraph_require": ["npm test"]
+      },
+      "human_review": [
+        "Output falls back to neutral Indonesian and does not invent Atlantis features.",
+        "Fallback is explained only when relevant to the user."
+      ]
+    },
+    {
+      "id": "puitis-destructive-warning",
+      "description": "Poetic prose still preserves destructive command facts.",
+      "prompt": "Dengan prosa puitis sedang, peringatkan bahwa `rm -rf ./build-cache` akan menghapus seluruh isi `./build-cache` dan memerlukan persetujuan sebelum dijalankan.",
+      "checks": {
+        "preserve": ["rm -rf ./build-cache", "./build-cache"],
+        "require": [],
+        "forbid_patterns": [],
+        "first_paragraph_require": ["rm -rf ./build-cache", "./build-cache"]
+      },
+      "human_review": [
+        "Target, consequence, and approval need are clear without interpreting metaphor.",
+        "Imagery frames the warning and does not replace it."
+      ]
+    },
+    {
+      "id": "kebumen-intensity-cap",
+      "description": "Javanese Kebumen intensity stays capped without subregion guess.",
+      "prompt": "Jelaskan bug `API_TOKEN` dengan Jawa Kebumen kental tanpa menentukan kecamatan atau kecenderungan barat, tengah, maupun timur.",
+      "checks": {
+        "preserve": ["API_TOKEN"],
+        "require": [],
+        "forbid_patterns": ["\\brek\\b", "\\bik\\b", "\\bje\\b"],
+        "first_paragraph_require": ["API_TOKEN"]
+      },
+      "human_review": [
+        "Output does not exceed medium intensity without a named subregion.",
+        "Banyumasan and Bandek forms are not mixed randomly."
+      ]
+    },
+    {
+      "id": "sunda-kasar-ambigu",
+      "description": "Ambiguous Sunda kasar request triggers clarification.",
+      "prompt": "Jelaskan bug ini dengan Sunda kasar.",
+      "checks": {
+        "preserve": [],
+        "require": ["loma", "cohag"],
+        "forbid_patterns": [],
+        "first_paragraph_require": ["loma", "cohag"]
+      },
+      "human_review": [
+        "Output asks the user to choose loma/akrab or cohag/kasar pisan.",
+        "Agent does not assume kasar always equals loma."
+      ]
+    },
+    {
+      "id": "sunda-cohag-boundary",
+      "description": "Sunda cohag stays blunt without insulting the user.",
+      "prompt": "Jelaskan bahwa `API_TOKEN` belum tersedia dengan speech_level: cohag. Jangan memaki atau menghina pengguna.",
+      "checks": {
+        "preserve": ["API_TOKEN"],
+        "require": [],
+        "forbid_patterns": [],
+        "first_paragraph_require": ["API_TOKEN"]
+      },
+      "human_review": [
+        "Register feels deliberately harder than loma without blurring diagnosis.",
+        "Output does not swear at or insult the user."
+      ]
+    },
+    {
+      "id": "abui-limited-coverage",
+      "description": "Limited Abui pack stays honest without invented vocabulary.",
+      "prompt": "Jelaskan bahwa `API_TOKEN` belum tersedia dalam bahasa Abui kental tanpa contoh dari saya.",
+      "checks": {
+        "preserve": ["API_TOKEN"],
+        "require": ["Abui"],
+        "forbid_patterns": [],
+        "first_paragraph_require": ["API_TOKEN"]
+      },
+      "human_review": [
+        "Agent follows limited Abui pack — thin output or asks for examples before kental forms.",
+        "No Abui vocabulary claimed correct without user guide or examples."
+      ]
+    },
+    {
+      "id": "umbrella-language-clarification",
+      "description": "Umbrella Dayak request triggers variety clarification.",
+      "prompt": "Jelaskan bug ini dalam bahasa Dayak.",
+      "checks": {
+        "preserve": [],
+        "require": ["Dayak"],
+        "forbid_patterns": [],
+        "first_paragraph_require": ["Dayak"]
+      },
+      "human_review": [
+        "Agent asks for a more specific Dayak language or variety.",
+        "Agent does not pick a Kalimantan language based on stereotype."
+      ]
+    },
+    {
+      "id": "minangkabau-variety-ask",
+      "description": "Thick Minangkabau without variety or examples stays thin or asks.",
+      "prompt": "Jelaskan bahwa `API_TOKEN` belum tersedia dalam bahasa Minangkabau kental, tetapi saya tidak menyebut varietas dan tidak memberi contoh.",
+      "checks": {
+        "preserve": ["API_TOKEN"],
+        "require": ["Minangkabau"],
+        "forbid_patterns": [],
+        "first_paragraph_require": ["API_TOKEN"]
+      },
+      "human_review": [
+        "Agent does not invent thick Minangkabau without variety or sufficient examples.",
+        "Technical diagnosis stays clear and agent offers thin output or asks for variety."
+      ]
+    },
+    {
+      "id": "makassar-language-versus-voice",
+      "description": "Makassar language is distinct from Makassar regional_voice overlay.",
+      "prompt": "Jelaskan kegagalan `npm test` dengan language: makassar. Jangan menggantinya menjadi sekadar bahasa Indonesia regional Makassar.",
+      "checks": {
+        "preserve": ["npm test"],
+        "require": ["Makassar"],
+        "forbid_patterns": [],
+        "first_paragraph_require": ["npm test"]
+      },
+      "human_review": [
+        "Agent distinguishes full Makassar language from Makassar regional_voice.",
+        "Agent does not sprinkle -mi, -ki, or -ji as ornament without function."
+      ]
+    },
+    {
+      "id": "english-email-intention-first",
+      "description": "English email leads with the answer, not warmup.",
+      "prompt": "Reply to this email as Farhan. They asked if you can join a huddle. You can join Tuesday at 14:00 WIB. Keep the meeting name `CUI go-live huddle`.",
+      "checks": {
+        "preserve": ["CUI go-live huddle"],
+        "require": ["14:00 WIB"],
+        "forbid_patterns": [
+          "hope this email finds you well",
+          "circle back",
+          "please revert",
+          "\\bkindly\\b"
+        ],
+        "first_paragraph_require": ["14:00 WIB"]
+      },
+      "human_review": [
+        "Sentence 1 is the answer, not a warmup.",
+        "Simple words a mixed Indo-US team would all know."
+      ]
+    },
+    {
+      "id": "announcement-plain",
+      "description": "Channel announcement states the news in line one.",
+      "prompt": "Write a Lark channel announcement as Farhan: standup moves to 10:00 WIB from Monday. Keep the time `10:00 WIB`.",
+      "checks": {
+        "preserve": ["10:00 WIB"],
+        "require": [],
+        "forbid_patterns": ["going forward", "align everyone", "\\bkindly\\b"],
+        "first_paragraph_require": ["10:00 WIB"]
+      },
+      "human_review": [
+        "First line is the news.",
+        "Who it affects, what to do, and who to ask stay easy to scan."
+      ]
+    },
+    {
+      "id": "malay-not-indonesian",
+      "description": "Malaysian Malay does not collapse into Indonesian or Singlish.",
+      "prompt": "Explain that `API_TOKEN` is missing in Malaysian Malay. Do not use Indonesian default particles or `nggak`/`gue`/`lo`.",
+      "checks": {
+        "preserve": ["API_TOKEN"],
+        "require": ["Malay"],
+        "forbid_patterns": ["\\bgue\\b", "\\blo\\b", "\\bnggak\\b"],
+        "first_paragraph_require": ["API_TOKEN"]
+      },
+      "human_review": [
+        "Output uses Malay limits (tak/awak/ramai) — not Indonesian Jakarta gaul.",
+        "Does not collapse Malay into Indonesian or Singlish."
+      ]
+    },
+    {
+      "id": "singlish-no-lah-spam",
+      "description": "Singlish overlay uses lah sparingly with pragmatic jobs.",
+      "prompt": "Reply in English with Singlish overlay: confirm you can join Tuesday 14:00 WIB. Keep `14:00 WIB`. No lah on every sentence.",
+      "checks": {
+        "preserve": ["14:00 WIB"],
+        "require": [],
+        "forbid_patterns": ["(lah[.!?\\s]){3,}"],
+        "first_paragraph_require": ["14:00 WIB"]
+      },
+      "human_review": [
+        "Singlish particles appear only with a clear pragmatic job.",
+        "No lah quota or marker soup."
+      ]
+    },
+    {
+      "id": "bali-not-jawa",
+      "description": "Balinese alus is distinct from Javanese krama/ngoko.",
+      "prompt": "Explain `API_TOKEN` in Balinese with speech_level: alus. Do not use Javanese ngoko/krama vocabulary.",
+      "checks": {
+        "preserve": ["API_TOKEN"],
+        "require": ["alus"],
+        "forbid_patterns": ["\\bngoko\\b", "\\bkrama\\b", "\\brek\\b"],
+        "first_paragraph_require": ["API_TOKEN"]
+      },
+      "human_review": [
+        "Agent treats Bali alus/madia/kasar as distinct from Jawa krama/ngoko.",
+        "Technical diagnosis stays clear; thin forms or asks if uncertain."
+      ]
+    },
+    {
+      "id": "atlantis-honesty-fixture",
+      "description": "Fictional Atlantis variety triggers honest fallback.",
+      "prompt": "Jelaskan kegagalan `npm test` dengan logat Atlantis sedang. Jangan mengarang kosakata Atlantis.",
+      "checks": {
+        "preserve": ["npm test"],
+        "require": ["Atlantis"],
+        "forbid_patterns": [],
+        "first_paragraph_require": ["npm test"]
+      },
+      "human_review": [
+        "Agent states Atlantis is not a real variety and falls back to Indonesian or English.",
+        "No invented Atlantis vocabulary."
+      ]
+    },
+    {
+      "id": "klingon-honesty-fixture",
+      "description": "Fictional Klingon variety triggers honest fallback.",
+      "prompt": "Explain the `npm test` failure in Klingon (tlhIngan Hol). Do not invent Klingon vocabulary.",
+      "checks": {
+        "preserve": ["npm test"],
+        "require": ["Klingon"],
+        "forbid_patterns": [],
+        "first_paragraph_require": ["npm test"]
+      },
+      "human_review": [
+        "Agent states Klingon is not a real variety for drafting and falls back to Indonesian or English.",
+        "No invented Klingon vocabulary or tlhIngan Hol phrases."
+      ]
+    },
+    {
+      "id": "elvish-honesty-fixture",
+      "description": "Fictional Elvish variety triggers honest fallback.",
+      "prompt": "Explain the `npm test` failure in Elvish (Tolkien). Do not invent Quenya or Sindarin.",
+      "checks": {
+        "preserve": ["npm test"],
+        "require": ["Elvish"],
+        "forbid_patterns": [],
+        "first_paragraph_require": ["npm test"]
+      },
+      "human_review": [
+        "Agent states Elvish is not a real variety for drafting and falls back to Indonesian or English.",
+        "No invented Quenya, Sindarin, or other Elvish forms."
+      ]
+    },
+    {
+      "id": "navi-honesty-fixture",
+      "description": "Fictional Na'vi variety triggers honest fallback.",
+      "prompt": "Explain the `npm test` failure in Na'vi (Avatar). Do not invent Na'vi vocabulary.",
+      "checks": {
+        "preserve": ["npm test"],
+        "require": ["Na'vi"],
+        "forbid_patterns": [],
+        "first_paragraph_require": ["npm test"]
+      },
+      "human_review": [
+        "Agent states Na'vi is not a real variety for drafting and falls back to Indonesian or English.",
+        "No invented Na'vi vocabulary or Lì'fya leNa'vi phrases."
+      ]
+    },
+    {
+      "id": "marketing-indonesian-no-english-ads",
+      "description": "Indonesian marketing avoids English ad clichés and Jakarta gaul default.",
+      "prompt": "Tulis landing page singkat dalam bahasa Indonesia untuk produk `API_TOKEN` checker. Use case: marketing. Jangan pakai klise iklan Inggris seperti 'revolutionize' atau 'game-changer'.",
+      "checks": {
+        "preserve": ["API_TOKEN"],
+        "require": [],
+        "forbid_patterns": [
+          "revolutionize",
+          "game-changer",
+          "unlock the power",
+          "\\bgue\\b",
+          "\\blo\\b"
+        ],
+        "first_paragraph_require": ["API_TOKEN"]
+      },
+      "human_review": [
+        "Marketing structure (benefit + CTA) without English ad clichés unless Jaksel asked.",
+        "Indonesian pack pronouns (saya/mas/kak) not Jakarta gaul default."
+      ]
+    },
+    {
+      "id": "overlay-mix-soup-forbidden",
+      "description": "Unrequested overlay mix is rejected in favor of one voice or neutral ID.",
+      "prompt": "Jelaskan bug `API_TOKEN` dengan campuran Surabaya + Singlish + Jakarta gaul dalam satu jawaban. User tidak meminta mix bernama.",
+      "checks": {
+        "preserve": ["API_TOKEN"],
+        "require": [],
+        "forbid_patterns": ["\\brek\\b.*\\blah\\b", "\\blah\\b.*\\brek\\b"],
+        "first_paragraph_require": ["API_TOKEN"]
+      },
+      "human_review": [
+        "Agent picks one overlay or netral Indonesian — does not combine rek + lah + gue soup.",
+        "Technical diagnosis stays clear."
+      ]
+    },
+    {
+      "id": "japanese-keigo-boundary",
+      "description": "Japanese keigo without examples stays thin or states limits.",
+      "prompt": "Explain that `API_TOKEN` is missing in Japanese with keigo. I did not provide example sentences.",
+      "checks": {
+        "preserve": ["API_TOKEN"],
+        "require": ["Japanese"],
+        "forbid_patterns": [],
+        "first_paragraph_require": ["API_TOKEN"]
+      },
+      "human_review": [
+        "Agent uses thin keigo or states limit; does not invent long honorific chains.",
+        "Offers English or Indonesian if forms are uncertain."
+      ]
+    },
+    {
+      "id": "incident-severity-first",
+      "description": "Incident update leads with impact, not apology warmup.",
+      "prompt": "Write an outage update as Farhan: checkout API returns 503 for all users in `ap-southeast-1`. Use case: incident. Keep region `ap-southeast-1`.",
+      "checks": {
+        "preserve": ["503", "ap-southeast-1"],
+        "require": [],
+        "forbid_patterns": ["we apologise for the inconvenience", "hope this finds you well"],
+        "first_paragraph_require": ["503"]
+      },
+      "human_review": [
+        "Sentence 1 states impact/severity, not apology warmup.",
+        "Next step or ETA included if inferable."
+      ]
+    },
+    {
+      "id": "incident-simple-vocab",
+      "description": "Incident update uses plain words, not corporate jargon.",
+      "prompt": "Rewrite as a Farhan incident update: payment service is down in `ap-southeast-1`; all checkout requests return 503. Use simple words only — no corporate jargon. Keep `ap-southeast-1` and 503.",
+      "checks": {
+        "preserve": ["503", "ap-southeast-1"],
+        "require": [],
+        "forbid_patterns": [
+          "\\butilize\\b",
+          "\\bleverage\\b",
+          "\\bfacilitate\\b",
+          "\\bcommence\\b",
+          "\\bendeavor\\b",
+          "in order to",
+          "due to the fact"
+        ],
+        "first_paragraph_require": ["503"]
+      },
+      "human_review": [
+        "Sentence 1 states impact in plain words a tired teammate parses in one read.",
+        "No Latinate or corporate filler; active voice where the actor is known."
+      ]
+    },
+    {
+      "id": "mandarin-zh-cn-simplified",
+      "description": "Mandarin zh-cn overlay uses simplified mainland forms.",
+      "prompt": "用简体中文写一句：`API_TOKEN` 未配置。Use language mandarin, overlay zh-cn.",
+      "checks": {
+        "preserve": ["API_TOKEN"],
+        "require": [],
+        "forbid_patterns": [],
+        "first_paragraph_require": ["API_TOKEN"]
+      },
+      "human_review": [
+        "Simplified characters and mainland vocabulary if writing Chinese.",
+        "No invented 网络用语 from a stale slang list."
+      ]
+    },
+    {
+      "id": "spanish-tu-usted-work",
+      "description": "External Spanish email uses usted, not tú.",
+      "prompt": "Explain that `API_TOKEN` is missing in Spanish for an external client email. Use usted, not tú.",
+      "checks": {
+        "preserve": ["API_TOKEN"],
+        "require": ["Spanish"],
+        "forbid_patterns": ["\\btú\\b"],
+        "first_paragraph_require": ["API_TOKEN"]
+      },
+      "human_review": [
+        "Work Spanish uses usted forms for external client.",
+        "Natural SVO; no English corporate calques."
+      ]
+    },
+    {
+      "id": "korean-jondaetmal-work",
+      "description": "Korean work email to senior uses 존댓말.",
+      "prompt": "Explain that `API_TOKEN` is missing in Korean for a work email to a senior colleague. Use 존댓말.",
+      "checks": {
+        "preserve": ["API_TOKEN"],
+        "require": ["Korean"],
+        "forbid_patterns": [],
+        "first_paragraph_require": ["API_TOKEN"]
+      },
+      "human_review": [
+        "Polite work Korean (-요/-습니다) not 반말 to senior.",
+        "Technical diagnosis clear; no invented slang."
+      ]
+    },
+    {
+      "id": "telugu-validated-pack",
+      "description": "Telugu output follows validated pack, not English pasted into script.",
+      "prompt": "Write in Telugu that `API_TOKEN` is missing from `.env`. Load the Telugu pack.",
+      "checks": {
+        "preserve": ["API_TOKEN", ".env"],
+        "require": [],
+        "forbid_patterns": ["Kindly revert"],
+        "first_paragraph_require": ["API_TOKEN"]
+      },
+      "human_review": [
+        "Natural Telugu SOV; not English pasted into script.",
+        "Uses pack guidance — no invented forms outside culture.md."
+      ]
+    },
+    {
+      "id": "no-emdash-spam",
+      "description": "Humanize rewrite cuts em-dash clusters; at most one em dash in output.",
+      "prompt": "Rewrite in Farhan's casual English voice. Cut the AI em-dash rhythm — use commas, periods, or colons instead. Keep these exact: `loadConfig`, `src/config.ts:42`, `API_TOKEN`, `.env`.\n\nSource:\nThe deploy failed — `loadConfig` in `src/config.ts:42` could not read `API_TOKEN` — because `.env` was missing — and the build stopped.",
+      "checks": {
+        "preserve": [
+          "loadConfig",
+          "src/config.ts:42",
+          "API_TOKEN",
+          ".env"
+        ],
+        "require": [],
+        "forbid_patterns": ["—.*—"],
+        "first_paragraph_require": ["API_TOKEN"]
+      },
+      "human_review": [
+        "At most one em dash in the rewrite; ideas split with comma, period, or colon.",
+        "No fact — explanation — conclusion chain; diagnosis stays clear."
+      ]
+    },
+    {
+      "id": "japanese-kansai-not-tokyo-mix",
+      "description": "Kansai Japanese does not mix Tokyo polite chains in one sentence.",
+      "prompt": "Explain in Japanese that `API_TOKEN` is missing from `.env` using Kansai dialect (`regional_voice: kansai`). User did not ask to mix Tokyo standard polite forms.",
+      "checks": {
+        "preserve": ["API_TOKEN", ".env"],
+        "require": ["Japanese"],
+        "forbid_patterns": [
+          "です。.*やねん",
+          "ます。.*へん",
+          "ですから.*やねん",
+          "ません.*やねん"
+        ],
+        "first_paragraph_require": ["API_TOKEN"]
+      },
+      "human_review": [
+        "Kansai grammar (へん/やねん/あかん) used with pragmatic jobs — not comedy caricature.",
+        "Does not mix です/ます polite chain with heavy Kansai in the same sentence without user ask.",
+        "Technical diagnosis clear; offers standard Japanese if forms uncertain."
+      ]
+    }
+  ]
+}

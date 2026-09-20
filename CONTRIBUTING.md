@@ -1,0 +1,75 @@
+# Contributing to Polyglot Copywriter
+
+Thank you for helping improve this skill. All **agent-facing** instructions must be in **English**. User-facing **examples** in target languages (Indonesian, Japanese, etc.) belong in example tables and quoted output samples — not in section headers or routing rules.
+
+## Prerequisites
+
+- Python 3.10+
+- From the skill root (repo clone or install directory):
+
+```bash
+python3 scripts/validate_skill.py
+python3 -m unittest discover -s tests -q
+```
+
+Both must pass before you open a pull request.
+
+## Add a language
+
+1. **Scaffold** — `python3 scripts/new_language.py <id> "<Name>"` (copies `_template/language/`).
+   - For bulk adds, see `scripts/bulk_add_wave3.py` as a reference pattern.
+2. **Fill packs** — edit `pack.md`, `registers.md`, `culture.md`. Add `speech-levels.md` or `overlays/` when needed.
+   - Each `registers.md` needs one good + one bad example per register.
+   - `culture.md` needs a **Natural grammar** section (agent instructions in English).
+   - At least one regional overlay (`<id>-standard` or country code) unless umbrella/limited honesty applies.
+3. **Register** — append one row to `references/registry.json` with `"status": "validated"`.
+4. **Locale + profile** — run `python3 scripts/bulk_expand.py` to regenerate locale technique and profile index entries.
+5. **Validate** — `python3 scripts/validate_skill.py`.
+
+## Add a use case
+
+1. `python3 scripts/new_usecase.py <id> "<Name>"`
+2. Fill `references/usecases/<id>/pack.md` (structure only — language rules stay in language packs).
+3. Register in `references/registry.json`.
+4. If the use case needs a generic technique module, add `references/techniques/<name>.md` and an entry in `references/techniques/index.json`.
+
+## Add a locale technique
+
+Locale files live under `references/techniques/locales/<language_id>.md`.
+
+- **Instructions** (headers, bullets, routing notes): English.
+- **Examples** in the target language: OK in good/bad tables and quoted samples.
+- Add a row to `references/techniques/index.json` under `locales`.
+- Update routing in [references/core.md](references/core.md) § Technique routing and [references/techniques/README.md](references/techniques/README.md).
+
+## Add an overlay profile
+
+Profiles are short snapshots under `references/profiles/`. Authoritative rules stay in `references/languages/<lang>/overlays/<id>.md`.
+
+1. Add `<id>.md` under `references/profiles/`.
+2. Register in `references/profiles/index.json`.
+3. Register in `references/profiles/index.json` (validated by `validate_skill.py` and `tests/test_profiles.py`).
+4. Optionally document high-traffic overlays in [references/profiles/README.md](references/profiles/README.md).
+
+## Add an eval case
+
+Edit [evals/cases.json](evals/cases.json):
+
+- `description` — English summary of what the case tests.
+- `prompt` — may stay in any language when testing detection or locale output.
+- `human_review` — English criteria for manual review.
+- `checks` — `preserve`, `require`, `forbid_patterns`, `first_paragraph_require` as needed.
+
+Run `python3 scripts/evaluate_output.py <case-id> <output-file>` to test a draft against automatic checks.
+
+## Pull request expectations
+
+- **English-only agent instructions** across `SKILL.md`, `references/**`, `evals/**`, `scripts/**`, `tests/**`, and docs.
+- No links to removed docs (e.g. deleted competitor comparisons).
+- `python3 scripts/validate_skill.py` passes (registry, links, technique index, profile index, eval schema).
+- `python3 -m unittest discover -s tests -q` passes.
+- Update [README.md](README.md) file tree or coverage table when you add languages, techniques, or profiles.
+
+## License
+
+By contributing, you agree that your contributions are licensed under the [MIT License](LICENSE).
