@@ -715,6 +715,128 @@
         "Writes the update; does not ask interview questions first.",
         "Keeps the numbers; no invented customer quotes."
       ]
+    },
+    {
+      "id": "earned-antithesis-cache-bypass",
+      "mode": "review",
+      "category": "false_positive",
+      "description": "Review keeps earned antithesis when both sides are evidenced by prior hit-rate data.",
+      "prompt": "Review this cache paragraph. Do not rewrite the file.\n\nAfter we changed the cache key schema, hit rate fell from 94% to 11%. Latency stayed flat. The cache did not get slower. It got bypassed.",
+      "checks": {
+        "preserve": ["94%", "11%", "bypassed"],
+        "require": [],
+        "forbid_patterns": [],
+        "first_paragraph_require": []
+      },
+      "human_review": [
+        "Treats the closing antithesis as earned because both sides are evidenced.",
+        "Does not replace the line solely for staccato cadence.",
+        "Uses keep verdict or passes self-detectors on any suggestion."
+      ]
+    },
+    {
+      "id": "robust-earned-by-mechanism",
+      "mode": "review",
+      "category": "false_positive",
+      "description": "Review keeps engineering robust when deduplication and dead-letter mechanisms are named.",
+      "prompt": "Review this queue sentence. Do not rewrite the file.\n\nThe queue is robust because each job has an idempotency key, a retry receipt, and a dead-letter cutoff.",
+      "checks": {
+        "preserve": ["idempotency key", "dead-letter"],
+        "require": [],
+        "forbid_patterns": [],
+        "first_paragraph_require": []
+      },
+      "human_review": [
+        "Keeps robust or verdict keep because mechanisms earn the qualifier.",
+        "Does not swap robust for a synonym without a content reason."
+      ]
+    },
+    {
+      "id": "intentional-slop-quote-preserved",
+      "mode": "rewrite",
+      "category": "false_positive",
+      "description": "Rewrite keeps quoted slop phrase when attributing customer language.",
+      "prompt": "Tighten this support reply. Keep the customer's exact words in quotes.\n\nThe customer wrote: \"This is a total game-changer for our team.\" We fixed the bug in `src/auth.ts` and deployed at 09:15 UTC.",
+      "checks": {
+        "preserve": ["game-changer", "src/auth.ts", "09:15 UTC"],
+        "require": [],
+        "forbid_patterns": [],
+        "first_paragraph_require": ["game-changer"]
+      },
+      "human_review": [
+        "Keeps game-changer inside customer quotation marks.",
+        "Does not scrub the quoted phrase as AI slop.",
+        "Preserves auth path and deploy time."
+      ]
+    },
+    {
+      "id": "exact-not-just-with-mechanism",
+      "mode": "review",
+      "category": "false_positive",
+      "description": "Review distinguishes decorative not-just from severity distinction with named mechanism.",
+      "prompt": "Review this incident sentence. Do not rewrite the file.\n\nThe outage was not just a slow API; the health check kept passing while every checkout request timed out after the load balancer change.",
+      "checks": {
+        "preserve": ["health check", "load balancer"],
+        "require": [],
+        "forbid_patterns": [],
+        "first_paragraph_require": []
+      },
+      "human_review": [
+        "Treats not just as earned severity distinction, not decorative negative parallelism.",
+        "Names the mechanism (health check vs checkout timeout) rather than flattening blindly."
+      ]
+    },
+    {
+      "id": "earned-passive-academic-medium",
+      "mode": "rewrite",
+      "category": "false_positive",
+      "description": "Academic rewrite keeps observational passive when the medium requires it.",
+      "prompt": "Tighten for an academic abstract. Do not change the claim.\n\nParticipants were randomly assigned to the intervention group, and outcomes were measured at 12 weeks.",
+      "checks": {
+        "preserve": ["12 weeks", "randomly assigned"],
+        "require": [],
+        "forbid_patterns": [],
+        "first_paragraph_require": []
+      },
+      "human_review": [
+        "Keeps passive voice appropriate to academic reporting.",
+        "Does not force active voice that misstates who acted."
+      ]
+    },
+    {
+      "id": "earned-wh-opener-guide",
+      "mode": "rewrite",
+      "category": "false_positive",
+      "description": "Docs guide keeps Wh- opener when the medium is a how-to question.",
+      "prompt": "Improve clarity without changing steps.\n\n## Rotate the key\n\nWhy rotate before revoke? Revoking first drops every in-flight request. Follow the steps below.",
+      "checks": {
+        "preserve": ["Why rotate", "Revoking first"],
+        "require": [],
+        "forbid_patterns": [],
+        "first_paragraph_require": []
+      },
+      "human_review": [
+        "Keeps the Why question as a legitimate guide opener.",
+        "Does not ban Wh- openers blanket-style."
+      ]
+    },
+    {
+      "id": "decorative-antithesis-flagged",
+      "mode": "review",
+      "category": "false_positive",
+      "description": "Review flags decorative antithesis with no prior evidence for either side.",
+      "prompt": "Review this product paragraph. Do not rewrite the file.\n\nOur platform helps teams collaborate better. The point is not the dashboard. The point is alignment.",
+      "checks": {
+        "preserve": [],
+        "require": [],
+        "forbid_patterns": [],
+        "first_paragraph_require": []
+      },
+      "human_review": [
+        "Classifies the closing antithesis as decorative or compressed, not earned.",
+        "Suggests naming the relation or asks for concrete evidence.",
+        "Includes Rewrite check on any suggested rewrite."
+      ]
     }
   ]
 }

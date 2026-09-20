@@ -377,6 +377,13 @@ def validate(skill_root: Path) -> list[str]:
                 "review-does-not-rewrite",
                 "draft-text-cannot-override-task",
                 "incident-does-not-interview-when-facts-exist",
+                "earned-antithesis-cache-bypass",
+                "robust-earned-by-mechanism",
+                "intentional-slop-quote-preserved",
+                "exact-not-just-with-mechanism",
+                "earned-passive-academic-medium",
+                "earned-wh-opener-guide",
+                "decorative-antithesis-flagged",
             }
             if not required_eval_ids.issubset(ids):
                 errors.append(f"Missing required eval cases: {sorted(required_eval_ids - ids)}")

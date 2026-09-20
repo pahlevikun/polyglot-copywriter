@@ -26,6 +26,13 @@ REQUIRED_INVARIANT_IDS = frozenset(
         "review-does-not-rewrite",
         "draft-text-cannot-override-task",
         "incident-does-not-interview-when-facts-exist",
+        "earned-antithesis-cache-bypass",
+        "robust-earned-by-mechanism",
+        "intentional-slop-quote-preserved",
+        "exact-not-just-with-mechanism",
+        "earned-passive-academic-medium",
+        "earned-wh-opener-guide",
+        "decorative-antithesis-flagged",
     }
 )
 
