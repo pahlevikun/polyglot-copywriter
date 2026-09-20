@@ -245,9 +245,14 @@ polyglot-copywriter/
 ├── README.md
 ├── CONTRIBUTING.md
 ├── SKILL.md                          thin router (≤120 lines)
-├── commands/                         optional /polyglot-interview, -rewrite, -review wrappers
+├── commands/                         optional slash wrappers (see below)
+│   ├── polyglot-interview.md         /polyglot-interview
+│   ├── polyglot-rewrite.md           /polyglot-rewrite
+│   ├── polyglot-review.md            /polyglot-review
+│   └── polyglot-lint.md              /polyglot-lint
 ├── docs/
-│   └── 2026-09-20-clarity-substance-modes.md
+│   ├── 2026-09-20-clarity-substance-modes.md
+│   └── 2026-09-20-commands-audit.md
 ├── references/
 │   ├── registry.json · fictional-catalog.json · schema/
 │   ├── core.md · configuration.md · evaluation.md · regional.md
@@ -285,7 +290,15 @@ If you prefer dedicated slash commands, copy the wrappers in `commands/`:
 cp commands/*.md ~/.claude/commands/
 ```
 
-That gives `/polyglot-interview`, `/polyglot-rewrite`, and `/polyglot-review` (filenames match slash names).
+That gives `/polyglot-interview`, `/polyglot-rewrite`, `/polyglot-review`, and
+`/polyglot-lint` (filenames match slash names).
+
+| Slash command | Mode | Extra reference |
+|---|---|---|
+| `/polyglot-interview` | co-write | [`interview.md`](references/interview.md) |
+| `/polyglot-rewrite` | rewrite (incl. `humanize`) | [`substance.md`](references/substance.md) |
+| `/polyglot-review` | review | [`review-prose.md`](references/review-prose.md) |
+| `/polyglot-lint` | lint / stats | [`evaluation.md`](references/evaluation.md) self-check |
 
 Lookup a language id: `python3 scripts/find_language.py <name>`. Configuration axes (`register`, `regional_voice`, `speech_level`, `intensity`) are in [`configuration.md`](references/configuration.md).
 
