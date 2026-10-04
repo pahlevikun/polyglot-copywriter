@@ -51,7 +51,7 @@ Use before delivery on important drafts. **Not** a user-facing grade unless they
 
 | Axis | What to check | Weight |
 |---|---|---|
-| **AI-smell** | Cluster density per [anti-slop-prose.md](../anti-slop-prose.md) | 25% |
+| **AI-smell** | Cluster density per [noslop-prose.md](../noslop-prose.md) | 25% |
 | **Calque / translationese** | Sounds translated or stiff for the target lang | 20% |
 | **Register match** | Fits baku/pro/santai + channel | 20% |
 | **Clarity** | Sentence 1 job, scannable facts, no buried lead | 20% |
@@ -69,7 +69,7 @@ Full harness: [evaluation.md](../evaluation.md).
 
 | Mode | When | Depth |
 |---|---|---|
-| **Quick** (default) | Chat, email, short copy | Read-aloud + anti-slop checklist + register check |
+| **Quick** (default) | Chat, email, short copy | Read-aloud + noslop checklist + register check |
 | **Full** | External, legal-adjacent, long docs | Above + structure review (headings carry message) + [humanize-workflow.md](humanize-workflow.md) verify loop |
 
 **Score-only:** User asks "how AI does this sound?" — list findings and axis scores; do not rewrite until asked.
@@ -82,7 +82,7 @@ Terse pass on the draft:
 - Jargon undefined for this audience?
 - Passive voice hiding the actor?
 - Long sentences doing multiple jobs?
-- Em dashes (`—`) doing the work of periods or commas? Scan and split per [anti-slop-prose.md](../anti-slop-prose.md) em-dash rules.
+- Em dashes (`—`) doing the work of periods or commas? Scan and split per [noslop-prose.md](../noslop-prose.md) em-dash rules.
 - Headers are messages, not labels ("Background" → state the conclusion)?
 
 ## Long-form rhythm (light touch)

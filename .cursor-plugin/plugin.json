@@ -1,7 +1,7 @@
 {
   "name": "polyglot-copywriter",
   "displayName": "Polyglot Copywriter",
-  "description": "Multilingual copywriter with dialect overlays: humanize, rewrite, and draft natural copy in 97 real languages with anti-slop prose.",
+  "description": "Multilingual copywriter with dialect overlays: humanize, rewrite, and draft natural copy in 97 real languages with noslop prose.",
   "version": "1.0.0",
   "author": {
     "name": "pahlevikun"
@@ -16,7 +16,7 @@
     "humanize",
     "dialect",
     "marketing",
-    "anti-slop"
+    "noslop"
   ],
   "category": "productivity",
   "skills": "./"

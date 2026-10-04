@@ -2,7 +2,7 @@
 
 A reader gives you their attention one sentence at a time — in whatever language and register they actually use. **Polyglot Copywriter** is an agent skill that earns that attention across **97 real languages**, **163 dialect overlays**, and **18 use-case structures** without inventing facts the source never supplied.
 
-Most humanize skills scrub surface tells (em dashes, "delve," rule-of-three lists) and call it done. Generic model prose fails **before** style: no source, no attribution, no mechanism, no author judgment. This skill fixes substance first — then simple prose, anti-slop, and optional voice fingerprint — and keeps language packs honest about what they support.
+Most humanize skills scrub surface tells (em dashes, "delve," rule-of-three lists) and call it done. Generic model prose fails **before** style: no source, no attribution, no mechanism, no author judgment. This skill fixes substance first — then simple prose, noslop, and optional voice fingerprint — and keeps language packs honest about what they support.
 
 ## Install
 
@@ -29,7 +29,8 @@ Explicit word wins. Language, register, overlay, and use case resolve first; the
 ```txt
 interview / write / draft / new     co-write from the author's material
 rewrite / edit / fix / humanize   edit a draft or facts already in the prompt
-review / critique / check           diagnose; leave the file alone
+                                    (also: de-AI, less AI, tighten, simplify)
+review / critique / check / detect  diagnose, leave the file alone
 lint / stats                        self-check rubric in evaluation.md
 ```
 
@@ -43,6 +44,24 @@ Examples:
 Incident, chat, email, and docs with facts already in the prompt → **rewrite**, never interview. Missing operational detail becomes `[TK: …]`, not a plausible invention.
 
 [Full walkthrough below.](#three-ways-to-use-it)
+
+## Built-in humanizer and noslop
+
+This skill is the default for everyday prose, so it carries the full humanizer and noslop methods. Nothing else needs to be installed for them.
+
+| What | Where |
+|---|---|
+| 26 AI tells, strongest first, with before/after examples (not X but Y, one-line closers, sayings that sound deep, staged run-ups, arguing with no one, triads, dashes, AI words, inflated significance, sales language, bold and heading decoration, chatbot residue, knowledge-limit guesses, writing about the document, re-explaining what the reader knows) | [references/humanizer-patterns.md](references/humanizer-patterns.md) |
+| Principles ("sharp detail beats inflated significance"), hedged symmetry, outline conclusions, critique format, rewrite self-check | [references/noslop-doctrine.md](references/noslop-doctrine.md) |
+| Always-on cluster scan and symbol hygiene | [references/noslop-prose.md](references/noslop-prose.md) |
+| Detect, rewrite, verify loop, with pasted, file and embedded output modes | [references/techniques/humanize-workflow.md](references/techniques/humanize-workflow.md) |
+| Plain writing procedure and STE casual: lead with the point, short sentences, one word one meaning, plain-word swaps (English and Indonesian) | [references/simple-prose.md](references/simple-prose.md) |
+
+Rules that hold in every mode: keep every supported claim, add no fact, name, number, date, quote or citation, use no em dash, en dash, or semicolon in final prose unless your sample does (the first principle), and put the decision first in a reply. A sample of your own writing beats the default style but never the honesty rules. The goal is readable, trustworthy text, not beating AI detectors.
+
+The `/polyglot-humanize` command runs this directly on a draft or file.
+
+Credits: [blader/humanizer](https://github.com/blader/humanizer) (MIT, Siqi Chen), the `anti-slop-writing` skill (MIT, Ade Oshineye), and the `plain-writing` skill (merged into simple-prose.md). Licences are in [references/third-party/](references/third-party/humanizer-LICENSE). The humanizer patterns come from Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing).
 
 ## On copy that earns its reader
 
@@ -98,7 +117,7 @@ Doesn't this apply to everyone? A check you can do on each paragraph is: could t
 
 What tends to survive the test is your stuff: specific observed details, measured numbers, incidents of which you were a party, lived arguments, changed beliefs. In a rewrite, that stuff must come from the prompt, the draft, or the author's interview answers — not from the model's habit of plausible color. `~3% of sessions for about 20 minutes` survives. `a significant number of users were affected` does not.
 
-This is the stuff that can't be borrowed. If your piece isn't full of it, then it's sourceless. It's why writing exists at all. A draft that lacks it has a sourcing problem, not a prose problem — and no amount of anti-slop scrubbing in Japanese or Spanish will fix that.
+This is the stuff that can't be borrowed. If your piece isn't full of it, then it's sourceless. It's why writing exists at all. A draft that lacks it has a sourcing problem, not a prose problem — and no amount of noslop scrubbing in Japanese or Spanish will fix that.
 
 ### 5. Make every sentence pay
 
@@ -146,7 +165,7 @@ A simple style is the result of thorough thinking. Ornate prose in any language 
 
 When editing, flag every passage that you suspect might be superfluous. Then consider whether the piece still works without it. If it does, remove it.
 
-Over-stripping qualifiers yields inhuman prose. True writing contains a certain amount of hedging to reflect the writer's own uncertainty — and academic or observational copy may **require** earned qualification. Strip qualifiers that hide a claim. Keep those that honestly represent genuine uncertainty. A three-item operational checklist is not automatic slop; an academic hedge the evidence requires is not weakness. Adjudicate in context ([`substance.md`](references/substance.md), [`anti-slop-prose.md`](references/anti-slop-prose.md)).
+Over-stripping qualifiers yields inhuman prose. True writing contains a certain amount of hedging to reflect the writer's own uncertainty — and academic or observational copy may **require** earned qualification. Strip qualifiers that hide a claim. Keep those that honestly represent genuine uncertainty. A three-item operational checklist is not automatic slop; an academic hedge the evidence requires is not weakness. Adjudicate in context ([`substance.md`](references/substance.md), [`noslop-prose.md`](references/noslop-prose.md)).
 
 Do not turn a runbook into an essay to vary shape. Do not casualize a warning block because it "looks like AI." Cut ceremony, not structure the medium needs.
 
@@ -214,7 +233,7 @@ Chat and email often end after the ask. Incident updates end after status and ne
 
 Rewriting always means that you have moved the third paragraph to the top, deleted the proudest section of the first version, and found the true sentence buried inside the one you wrote.
 
-Smoothing is not rewriting. Smoothing turns a rough authentic sentence into a bland one and polishes away the only interesting thing in your draft. This skill follows substance order: truth → substance → development → sentences → craft ([`substance.md`](references/substance.md)). Anti-slop and simple-prose come after the piece has something to say. If the draft is hollow, the skill says so and offers interview or a plain true version with `[TK: …]` markers instead of vivid invention.
+Smoothing is not rewriting. Smoothing turns a rough authentic sentence into a bland one and polishes away the only interesting thing in your draft. This skill follows substance order: truth → substance → development → sentences → craft ([`substance.md`](references/substance.md)). Noslop and simple-prose come after the piece has something to say. If the draft is hollow, the skill says so and offers interview or a plain true version with `[TK: …]` markers instead of vivid invention.
 
 > Rewriting is the essence of writing well: it's where the game is won or lost.
 >
@@ -242,6 +261,7 @@ polyglot-copywriter/
 ├── commands/                         optional slash wrappers (see below)
 │   ├── polyglot-interview.md         /polyglot-interview
 │   ├── polyglot-rewrite.md           /polyglot-rewrite
+│   ├── polyglot-humanize.md          /polyglot-humanize
 │   ├── polyglot-review.md            /polyglot-review
 │   └── polyglot-lint.md              /polyglot-lint
 ├── docs/
@@ -251,7 +271,7 @@ polyglot-copywriter/
 │   ├── registry.json · fictional-catalog.json · schema/
 │   ├── core.md · configuration.md · evaluation.md · regional.md
 │   ├── substance.md · interview.md · review-prose.md
-│   ├── simple-prose.md · anti-slop-prose.md · voice-fingerprint.md
+│   ├── simple-prose.md · noslop-prose.md · voice-fingerprint.md
 │   ├── dialect-coverage.md
 │   ├── languages/<id>/               pack.md · registers.md · culture.md
 │   ├── usecases/<id>/pack.md
@@ -284,13 +304,14 @@ If you prefer dedicated slash commands, copy the wrappers in `commands/`:
 cp commands/*.md ~/.claude/commands/
 ```
 
-That gives `/polyglot-interview`, `/polyglot-rewrite`, `/polyglot-review`, and
+That gives `/polyglot-interview`, `/polyglot-rewrite`, `/polyglot-humanize`, `/polyglot-review`, and
 `/polyglot-lint` (filenames match slash names).
 
 | Slash command | Mode | Extra reference |
 |---|---|---|
 | `/polyglot-interview` | co-write | [`interview.md`](references/interview.md) |
 | `/polyglot-rewrite` | rewrite (incl. `humanize`) | [`substance.md`](references/substance.md) |
+| `/polyglot-humanize` | rewrite (humanize pass, 26 tells) | [`humanizer-patterns.md`](references/humanizer-patterns.md) |
 | `/polyglot-review` | review | [`review-prose.md`](references/review-prose.md) |
 | `/polyglot-lint` | lint / stats | [`evaluation.md`](references/evaluation.md) self-check |
 
@@ -409,7 +430,7 @@ Instead of one giant prompt, the skill is a **thin router** (`SKILL.md`) that lo
 4. **Optional overlay** — When `regional_voice` is set (or the user names a dialect), load the matching overlay under `overlays/` and, if helpful, a snapshot from [`references/profiles/`](references/profiles/).
 5. **Optional use case** — Email, marketing, incident, chat, and similar ids load `references/usecases/<id>/pack.md` for **structure only**.
 6. **Technique modules** — Generic techniques first; then a locale file from [`techniques/locales/<lang>.md`](references/techniques/locales/) when one exists.
-7. **Voice pipeline** — Core ([`core.md`](references/core.md)), simple prose ([`simple-prose.md`](references/simple-prose.md)), anti-slop ([`anti-slop-prose.md`](references/anti-slop-prose.md)), substance ([`substance.md`](references/substance.md)), optional Farhan fingerprint ([`voice-fingerprint.md`](references/voice-fingerprint.md) — EN/ID only), then evaluation ([`evaluation.md`](references/evaluation.md)).
+7. **Voice pipeline** — Core ([`core.md`](references/core.md)), simple prose ([`simple-prose.md`](references/simple-prose.md)), noslop ([`noslop-prose.md`](references/noslop-prose.md)), substance ([`substance.md`](references/substance.md)), optional Farhan fingerprint ([`voice-fingerprint.md`](references/voice-fingerprint.md) — EN/ID only), then evaluation ([`evaluation.md`](references/evaluation.md)).
 8. **Output** — Natural prose in the target language, register, and dialect — with protected artifacts (numbers, names, links) preserved.
 
 ### Modes (after language routing)
@@ -438,7 +459,7 @@ flowchart LR
     usecaseQ -->|no| genericTech["Generic technique"]
     usecasePack --> genericTech
     genericTech --> localeTech["Locale technique"]
-    localeTech --> pipeline["Substance / humanize / anti-slop"]
+    localeTech --> pipeline["Substance / humanize / noslop"]
     pipeline --> output["Output"]
 ```
 

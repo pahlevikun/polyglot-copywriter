@@ -54,6 +54,16 @@ rewrite would be a `revise` on review, rewrite again or escalate to
   fallback
 - **cut** — repetition, ceremony, unsupported emphasis, empty closer
 
+### Quick critique block
+
+For a single paragraph or a short message, the compact block in [noslop-doctrine.md](noslop-doctrine.md) § Critique output format
+(`Verdict`, `Slop tells`, `Specificity missing`, `Inflated claim`, `Flow break`,
+`Concrete rewrite`, `Rewrite check`, `Remembered line`) is fine. Name each tell
+by its number in [humanizer-patterns.md](humanizer-patterns.md) (for example
+"§1 not X but Y", "§26 re-explains the thread"). Before grading a contrast as
+compressed or decorative, read the sentence before it. If that sentence supplies
+the mechanism, the contrast is earned.
+
 ## Rules
 
 1. Do not produce a replacement draft or claim to have edited a file.

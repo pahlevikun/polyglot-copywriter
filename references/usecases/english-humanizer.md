@@ -2,22 +2,24 @@
 
 Goal: take sterile, formulaic, or overly dramatic AI text and rewrite it so it sounds like a real, thoughtful human being wrote it.
 
-**Canonical pattern catalog:** [anti-slop-prose.md](../anti-slop-prose.md) (always-on, all languages). This file is the **English extended library** and operation modes. Do not treat overlapping rows as separate rules — when both cover the same tell, follow anti-slop-prose (cluster + earned-pattern discipline).
+**Canonical pattern catalog:** [noslop-prose.md](../noslop-prose.md) (always-on, all languages). This file is the **English extended library** and operation modes. Do not treat overlapping rows as separate rules — when both cover the same tell, follow noslop-prose (cluster + earned-pattern discipline).
 
 ### Dedup map (humanizer v3 ↔ this file)
 
-| Canonical (anti-slop-prose + below) | Deprecated duplicate here |
+| Canonical (noslop-prose + below) | Deprecated duplicate here |
 |---|---|
-| Empty AI vocabulary (#1, tone table) | Re-list in Extended catalog — use anti-slop table first |
+| Empty AI vocabulary (#1, tone table) | Re-list in Extended catalog — use noslop table first |
 | Rule of three (#2) | Same — adjudicate earned lists per substance.md |
 | Trailing participles (#3) | Same |
 | Significance inflation (#4–5, #11) | Same |
 | Filler transitions (#6) | Same |
 | Passive / fake balance (#7–8) | Same — keep earned passive in academic/docs |
-| Copula displacement | See anti-slop **Pattern strength** + flow-by-relation |
+| Copula displacement | See noslop **Pattern strength** + flow-by-relation |
 | Staccato / negative parallelism | See [flow-by-relation.md](../techniques/flow-by-relation.md) |
-| Arguing with no one, vague association, knowledge-limit disclaimers | anti-slop-prose only (added 2026-09-20) |
-| Meta-commentary, quotables, writing-about-previous-version | anti-slop-prose only (added 2026-09-20) |
+| Arguing with no one, vague association, knowledge-limit disclaimers | noslop-prose only (added 2026-09-20) |
+| Meta-commentary, quotables, writing-about-previous-version | noslop-prose only (added 2026-09-20) |
+| Full 26-tell catalog (not X but Y, closers, sayings, staged run-ups, arguing with no one, triads, repeated openings, dashes, qualifiers, hyphens, passive, AI words, inflation, association, -ing riders, sales language, borrowed authority, is/are/has, bold, headings, curly quotes, chatbot residue, knowledge-limit guesses, repeated heading, writing about the document, wrong reader) | [humanizer-patterns.md](../humanizer-patterns.md) is canonical. Patterns #1 to #20 below stay as English worked examples |
+| Principles, hedged symmetry, outline conclusions, critique format | [noslop-doctrine.md](../noslop-doctrine.md) |
 
 Patterns #1–#20 below remain as **worked examples** for English humanize mode. Load [humanize-workflow.md](../techniques/humanize-workflow.md) for detect → rewrite → verify, survivor tells, and optional show-work output.
 
@@ -196,9 +198,9 @@ Goal: the result sounds like a **specific person**, not a scrubbed average.
 
 ---
 
-## Extended anti-slop catalog
+## Extended noslop catalog
 
-Peer references: [anti-slop-prose.md](../anti-slop-prose.md) + [voice-fingerprint.md](../voice-fingerprint.md). The tables below extend the Core Pattern Library above; they do not replace it or each other. Humanize = thin clusters **and** preserve Farhan markers in the same rewrite.
+Peer references: [noslop-prose.md](../noslop-prose.md) + [voice-fingerprint.md](../voice-fingerprint.md). The tables below extend the Core Pattern Library above; they do not replace it or each other. Humanize = thin clusters **and** preserve Farhan markers in the same rewrite.
 
 ### Symbol hygiene (prose) — collaborate with voice-fingerprint
 

@@ -1,8 +1,8 @@
-# Anti-slop prose (always on)
+# Noslop prose (always on)
 
 Read this **together with** [core.md](core.md) and [voice-fingerprint.md](voice-fingerprint.md) for every mode, including casual. It pairs with Step 2.5 and Step 3.5 in `SKILL.md`. Overlap with [english-humanizer.md](usecases/english-humanizer.md) is intentional: each file covers a different lens on the same draft; none cancels the others.
 
-Integrated into Polyglot Voice as **always-on cluster detection** (thin AI tells on every pass; full humanize mode also loads [humanize-workflow.md](techniques/humanize-workflow.md) and the humanizer use case). **Simple prose** ([simple-prose.md](simple-prose.md)) is the vocabulary/grammar floor — anti-slop thins AI clusters on top; it does not replace short sentences and common words.
+Integrated into Polyglot Voice as **always-on cluster detection** (thin AI tells on every pass; full humanize mode also loads [humanize-workflow.md](techniques/humanize-workflow.md) and the humanizer use case). **Simple prose** ([simple-prose.md](simple-prose.md)) is the vocabulary/grammar floor — noslop thins AI clusters on top; it does not replace short sentences and common words.
 
 ## How references collaborate
 
@@ -14,21 +14,26 @@ These guides are **peers**, not a stack where one overrides another. Apply them 
 | [simple-prose.md](simple-prose.md) | Simple vocabulary and grammar default for every language |
 | [voice-fingerprint.md](voice-fingerprint.md) | Farhan's real sentence shapes, trademark phrases, corpus markers |
 | **This file** | AI cluster tells, symbol hygiene, honesty, markdown spam |
+| [humanizer-patterns.md](humanizer-patterns.md) | The 26-tell catalog, strongest first, with before/after examples and file/embedded/pasted output modes |
+| [noslop-doctrine.md](noslop-doctrine.md) | Principles ("sharp detail beats inflated significance"), extra detectors, critique format, rewrite self-check |
 | [english-humanizer.md](usecases/english-humanizer.md) | Extended pattern library + analyze/humanize operation modes |
 | [humanize-workflow.md](techniques/humanize-workflow.md) | Detect → rewrite → verify loop; detect vs edit modes |
 | [regional.md](regional.md) / [configuration.md](configuration.md) | Overlays when the user picks a variety or style |
 
 **Collaboration rules:**
 
-1. **Voice + anti-slop together.** Thin AI clusters *and* keep Farhan markers. If a phrase is in the real corpus ([voice-fingerprint.md](voice-fingerprint.md)) and not an AI tell, keep it even while cutting nearby slop.
-2. **Same job, different form.** When [voice-fingerprint.md](voice-fingerprint.md) calls for a coordination aside (Pattern 2), [anti-slop-prose.md](anti-slop-prose.md) prefers comma, colon, or parentheses over em dash — same rhetorical job, slop-safe punctuation. Arrows in prose (`→`) still become words ("to", "then") unless they are code or a quoted artifact.
+1. **Voice + noslop together.** Thin AI clusters *and* keep Farhan markers. If a phrase is in the real corpus ([voice-fingerprint.md](voice-fingerprint.md)) and not an AI tell, keep it even while cutting nearby slop.
+2. **Same job, different form.** When [voice-fingerprint.md](voice-fingerprint.md) calls for a coordination aside (Pattern 2), [noslop-prose.md](noslop-prose.md) prefers comma, colon, or parentheses over em dash — same rhetorical job, slop-safe punctuation. Arrows in prose (`→`) still become words ("to", "then") unless they are code or a quoted artifact.
 3. **User sample is a third collaborator.** Match the sample's rhythm, punctuation habits, and markers. Still apply honesty rules (no new fabricated facts). Do not strip deliberate sample choices while thinning *unrequested* AI clustering in generated filler.
-4. **Use-case files add format.** Email, MR review, RFC, and the rest layer channel rules on top; they do not replace core, voice, or anti-slop.
+4. **Use-case files add format.** Email, MR review, RFC, and the rest layer channel rules on top; they do not replace core, voice, or noslop.
 5. **Clusters, not veto.** One em dash, one "however", or one short fragment is not a failure by itself. Cross-check both files before cutting something that sounds like Farhan.
 6. **Earned patterns stay.** A concrete list of three operational checks,
    an academic hedge the evidence requires, or a docs heading pattern is
    not slop. Adjudicate in context ([substance.md](substance.md)). Do not
    split, casualize, or "vary the shape" merely to look less like a model.
+
+7. **Dash precedence.** [humanizer-patterns.md](humanizer-patterns.md) §8 sets the default: no em dashes, en dashes, or semicolons in final prose unless the user's sample uses them. This is the first principle. The budget table below is the upper limit for `baku` and for sample-matched voice, not a target for casual or `profesional` text.
+8. **One catalog.** Rows in this file and numbered tells in [humanizer-patterns.md](humanizer-patterns.md) are the same tells. Use the numbered catalog for strength order and worked examples, and this file for the always-on cluster scan.
 
 ## Two global rules
 
@@ -42,6 +47,7 @@ In user-facing prose (all modes), avoid decorative symbols that read as AI forma
 | Avoid in prose | Use instead |
 |---|---|
 | Em dash `—` or spaced ` - ` as an aside | Comma, colon, parentheses, or a new sentence |
+| Semicolon `;` joining two clauses | A period, or a plain connective (`because`, `so`, `but`) |
 | En dash `–` as a connector between clauses | Comma, colon, or split into two sentences |
 | Arrow glyphs in running text (`→`, `->`, `=>`, `⇒`) | "to", "then", "leads to", or a short list sentence |
 | Unicode bullets or ornament arrows mid-sentence | A normal list, or "first … second …" |
@@ -75,7 +81,7 @@ In daily coworker copy, em dashes (`—`) are rare. Models overuse them as a def
 
 | Pattern | What to watch for |
 |---|---|
-| **Empty AI vocabulary** | unlock, elevate, empower, delve, showcase, testament, landscape (abstract), journey, robust, seamless, cutting-edge, revolutionary |
+| **Empty AI vocabulary** | game-changer, navigate the landscape, unlock, elevate, empower, delve, showcase, testament, landscape (abstract), journey, robust, seamless, cutting-edge, revolutionary |
 | **Significance inflation** | "future of X", "pivotal moment", "new era", "revolutionizing" |
 | **Empty social proof** | "trusted by thousands", "industry-leading", "world-class" with no names or numbers |
 | **Weasel attributions** | "experts say", "industry observers" — name the source or cut |
@@ -104,6 +110,12 @@ In daily coworker copy, em dashes (`—`) are rare. Models overuse them as a def
 | **Meta-commentary** | "As we'll see", "the rest of this essay", "this section will explore" |
 | **Copula displacement** | `serves as`, `boasts`, `features`, `stands as`, `represents` where plain `is` or a specific verb would do — keep when enumerating, defining, or locating |
 | **Writing about previous version** | Docs prose that narrates what was replaced (non-changelog); state what *is* now |
+| **Explain-the-example closer** | A line after a scene, number or example that names what it showed ("This shows the importance of…", "The message was clear:"). Cut unless it adds a fact the example does not show |
+| **Repeated openings** | Several sentences in a row with the same subject. Merge, change the subject, or lead with the action |
+| **Hedged symmetry** | "Whether you're X or Y", "While X, Y is also important" with no real branch |
+| **Outline conclusions** | "Despite challenges, X continues to thrive", "Looking ahead, X will play a pivotal role" |
+| **Writing about the document** | "generated from…", "the table below compares…", "anything unconfirmed is flagged". Describe the subject, not the page |
+| **Wrong reader** | A reply that rebuilds background the reader already has and puts the decision last. Lead with the decision ([humanizer-patterns.md](humanizer-patterns.md) §26) |
 
 ## Honesty and evidence
 
@@ -125,6 +137,10 @@ In daily coworker copy, em dashes (`—`) are rare. Models overuse them as a def
 | **Emoji headings** | 🚀 Launch, ✅ Next steps |
 | **Filler phrases** | "in order to", "due to the fact that", "it is important to note that" |
 | **Stacked hedging** | "could potentially possibly" — one qualifier is enough |
+| **Title Case headings, rules, `# Title` repeated** | Sentence case, no `---` between every section, title appears once |
+| **Heading restated in line 1** | `## Performance` then "Speed matters." Delete the restating line |
+| **Hyphen after the noun** | `the report is high-quality` → `high quality`. Keep `third-party`, `cross-functional` as spelled. Weak alone |
+| **Curly quotes** | Use straight quotes where the target format does. Weak alone |
 
 ## What not to flag
 
