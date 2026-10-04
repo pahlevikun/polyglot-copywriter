@@ -47,4 +47,4 @@ Default `profesional`. `santai` must not hide severity or soften data-loss warni
 ## Related
 
 - [natural-writing.md](natural-writing.md) — plain words under stress
-- [anti-slop-prose.md](../anti-slop-prose.md) — no hollow reassurance clusters
+- [noslop-prose.md](../noslop-prose.md) — no hollow reassurance clusters

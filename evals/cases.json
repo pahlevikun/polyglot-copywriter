@@ -837,6 +837,178 @@
         "Suggests naming the relation or asks for concrete evidence.",
         "Includes Rewrite check on any suggested rewrite."
       ]
+    },
+    {
+      "id": "humanizer-not-x-but-y-stated-directly",
+      "mode": "rewrite",
+      "category": "humanize",
+      "description": "Rewrite states the point directly instead of keeping a not-X-but-Y contrast that adds only weight.",
+      "prompt": "Humanize this. It's not just a dashboard, it's a whole new way of seeing your team. It's not merely faster reports, it's better decisions.",
+      "checks": {
+        "preserve": [],
+        "require": [],
+        "forbid_patterns": [
+          "\\bnot (just|only|merely)\\b",
+          "\\bit'?s not\\b.{0,60}\\bit'?s\\b"
+        ],
+        "first_paragraph_require": []
+      },
+      "human_review": [
+        "Says what the dashboard does without a contrast frame.",
+        "Does not invent features, numbers or customers."
+      ]
+    },
+    {
+      "id": "humanizer-chatbot-wrapper-removed",
+      "mode": "rewrite",
+      "category": "humanize",
+      "description": "Rewrite removes greeting, praise and closing offer and keeps the content.",
+      "prompt": "Clean up this text for a wiki page.\n\nGreat question! Here is an overview of the release. Version 2.3 shipped on 4 March and fixes the login timeout. I hope this helps! Let me know if you'd like me to expand on any section.",
+      "checks": {
+        "preserve": [
+          "2.3",
+          "4 March",
+          "login timeout"
+        ],
+        "require": [],
+        "forbid_patterns": [
+          "great question",
+          "hope this helps",
+          "let me know if",
+          "here is an overview"
+        ],
+        "first_paragraph_require": []
+      },
+      "human_review": [
+        "Output is only the wiki text.",
+        "Both facts kept."
+      ]
+    },
+    {
+      "id": "humanizer-no-dashes-in-final-prose",
+      "mode": "rewrite",
+      "category": "humanize",
+      "description": "Final prose has no em dash, en dash, semicolon or spaced double hyphen when the user gave no sample that uses them (first principle).",
+      "prompt": "Rewrite this update. The migration — planned for weeks — finished early; two bugs were fixed; the team -- tired but happy -- closed the ticket.",
+      "checks": {
+        "preserve": [],
+        "require": [],
+        "forbid_patterns": [
+          "[—–]",
+          "\\s--\\s",
+          ";"
+        ],
+        "first_paragraph_require": []
+      },
+      "human_review": [
+        "Uses commas, periods or parentheses instead of dashes.",
+        "Keeps both facts."
+      ]
+    },
+    {
+      "id": "humanizer-keeps-code-and-paths",
+      "mode": "rewrite",
+      "category": "humanize",
+      "description": "File-style rewrite changes prose only and keeps code, commands and paths byte for byte.",
+      "prompt": "Edit the prose only. Keep code unchanged.\n\nIt's worth noting that you should simply run `npm run build` and then check `dist/app.js` — this is a crucial step in the pipeline.",
+      "checks": {
+        "preserve": [
+          "`npm run build`",
+          "`dist/app.js`"
+        ],
+        "require": [],
+        "forbid_patterns": [
+          "worth noting",
+          "\\bcrucial\\b",
+          "—"
+        ],
+        "first_paragraph_require": []
+      },
+      "human_review": [
+        "Prose is shorter and plainer.",
+        "Commands and paths are untouched."
+      ]
+    },
+    {
+      "id": "humanizer-reply-leads-with-decision",
+      "mode": "rewrite",
+      "category": "humanize",
+      "description": "A reply in a thread leads with the decision and drops background the reviewer already has.",
+      "prompt": "A reviewer asked: 'Can we fix this in MergeService instead of patching here?'\n\nDraft reply: As you know, the bug happens because MergeService only updates parent_id when a child moves, and not pipeline_id. I checked QA and found 123 past merges, of which 6 rows are wrong today. We could backfill them from the audit log. MergeService is shared across accounts, so I would rather not widen this PR. I think a separate ticket is best.\n\nRewrite the reply.",
+      "checks": {
+        "preserve": [
+          "MergeService"
+        ],
+        "require": [],
+        "forbid_patterns": [],
+        "first_paragraph_require": [
+          "separate ticket"
+        ]
+      },
+      "human_review": [
+        "First sentence gives the decision.",
+        "Does not re-explain the diagnosis the reviewer wrote or agreed to.",
+        "Keeps the one fact that changes the decision (shared across accounts)."
+      ]
+    },
+    {
+      "id": "humanizer-no-invented-facts",
+      "mode": "rewrite",
+      "category": "humanize",
+      "description": "Rewrite of vague copy adds no number, name, customer or quote the user did not give.",
+      "prompt": "Humanize this launch line without adding any facts. Our groundbreaking platform empowers teams to unlock seamless collaboration and drive transformative results.",
+      "checks": {
+        "preserve": [],
+        "require": [],
+        "forbid_patterns": [
+          "\\d",
+          "\\b(customers?|clients?) (like|such as)\\b",
+          "\\bsaid\\b"
+        ],
+        "first_paragraph_require": []
+      },
+      "human_review": [
+        "Plain claim or an ask for what the product does.",
+        "Marks the missing facts or asks, does not invent them."
+      ]
+    },
+    {
+      "id": "humanizer-earned-contrast-kept",
+      "mode": "rewrite",
+      "category": "false_positive",
+      "description": "A contrast that corrects a belief the reader holds stays.",
+      "prompt": "Humanize this note, but only fix real problems. Despite the name, the cache is not cleared on deploy. It is cleared only on a schema change.",
+      "checks": {
+        "preserve": [
+          "schema change"
+        ],
+        "require": [],
+        "forbid_patterns": [],
+        "first_paragraph_require": []
+      },
+      "human_review": [
+        "Keeps the correction because the reader likely expects clearing on deploy.",
+        "Does not flatten it to a weaker sentence."
+      ]
+    },
+    {
+      "id": "ste-casual-simple-words",
+      "mode": "rewrite",
+      "category": "humanize",
+      "description": "Rewrite uses plain verbs and short sentences instead of corporate jargon.",
+      "prompt": "Rewrite for a casual team chat. We will leverage the new script to facilitate the commencement of the migration prior to the standup.",
+      "checks": {
+        "preserve": [],
+        "require": [],
+        "forbid_patterns": [
+          "\\b(leverage|facilitate|commencement|commence|prior to|utili[sz]e)\\b"
+        ],
+        "first_paragraph_require": []
+      },
+      "human_review": [
+        "Uses words like use, start, before.",
+        "Sentences are short and active."
+      ]
     }
   ]
 }

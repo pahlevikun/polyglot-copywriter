@@ -59,7 +59,7 @@ Agents run this mentally on important drafts; users only see scores when they as
 
 | Axis | What to check | Weight |
 |---|---|---|
-| **AI-smell** | Cluster density per [anti-slop-prose.md](anti-slop-prose.md) — not isolated tells; em-dash density counts | 25% |
+| **AI-smell** | Cluster density per [noslop-prose.md](noslop-prose.md) — not isolated tells; em-dash density counts | 25% |
 | **Calque / translationese** | Sounds translated or stiff for target language; see [techniques/natural-writing.md](techniques/natural-writing.md) | 20% |
 | **Register match** | Fits `baku` / `profesional` / `santai` + channel + use case | 20% |
 | **Clarity** | Sentence 1 job; facts scannable; no buried lead; [simple-prose.md](simple-prose.md) bar | 20% |
@@ -95,11 +95,24 @@ Run with [simple-prose.md](simple-prose.md) on any user-facing draft:
 - [ ] Does each explanatory sentence carry one main idea (split overloaded lines)?
 - [ ] Any nested clause, passive stack, or jargon verb that exists only to sound "professional"? Replace or split.
 
-## Em dash self-check (before delivery)
+## Humanizer self-check (before delivery)
+
+Run on any rewrite, humanize or review task, with [humanizer-patterns.md](humanizer-patterns.md):
+
+- [ ] Strongest tells (§1 to §5, §13, §22, §23) are gone or kept on purpose (earned contrast, real triad).
+- [ ] The five survivors are clear: §1 contrast, §2 closer, §6 triad, §8 dash, §19 bold label.
+- [ ] No added or dropped fact, name, number, date, quote, citation or ranking.
+- [ ] No chatbot wrapper (§22). No guess dressed as fact (§23).
+- [ ] In a reply, the decision comes first (§26).
+- [ ] The rewrite is simpler than the source, not fancier ([simple-prose.md](simple-prose.md)).
+- [ ] File mode: only prose changed. Embedded mode: only the final text returned.
+- [ ] It still sounds like a person: voice sample matched, one specific detail or honest uncertainty kept.
+
+## Dash and semicolon self-check (before delivery)
 
 Run on chat, email, incident, and humanize drafts:
 
-- [ ] Scan for `—`; if more than one per ~200 words (or any in chat/incident unless quoting), split with comma, period, or colon.
+- [ ] Scan for `—`, `–`, and `;`. First principle: none in final prose ([humanizer-patterns.md](humanizer-patterns.md) §8). Allowed only for `baku`, a user sample that uses them, or quoted text, and then at most one per ~200 words. Split with comma, period, colon or parentheses.
 - [ ] No `fact — explanation — conclusion` chains; each idea gets its own sentence when possible.
 
 ## Mode and fidelity check (before delivery)

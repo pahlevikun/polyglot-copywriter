@@ -1,7 +1,7 @@
 # Substance (all modes)
 
 Load after [core.md](core.md), [simple-prose.md](simple-prose.md), and
-[anti-slop-prose.md](anti-slop-prose.md). Language packs still own grammar
+[noslop-prose.md](noslop-prose.md). Language packs still own grammar
 and dialect. This file owns truth, source, and how hard to edit.
 
 ## Safeguards
@@ -49,7 +49,7 @@ Fix in this order. Stop when the request is met.
 3. Development (paragraphs connect by cause, contrast, sequence, example —
    when sections read like a list, add hinge sentences per
    [flow-by-relation.md](techniques/flow-by-relation.md))
-4. Sentences (anti-slop + simple-prose)
+4. Sentences (noslop + simple-prose)
 5. Craft (restore warmth the source already had; do not perform humanness)
 
 If the draft is hollow, say so in two or three sentences and offer

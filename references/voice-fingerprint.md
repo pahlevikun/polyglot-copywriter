@@ -2,7 +2,7 @@
 
 Extracted from: IDP_2026 (v1–v5), Sprint_Summary_Management_2026, Biweekly_Report files (May–Jul 2026).
 
-Apply **together with** [core.md](core.md) and [anti-slop-prose.md](anti-slop-prose.md) on every draft. This file says what to **keep**; anti-slop says what to **thin**. See "How references collaborate" in [anti-slop-prose.md](anti-slop-prose.md).
+Apply **together with** [core.md](core.md) and [noslop-prose.md](noslop-prose.md) on every draft. This file says what to **keep**; noslop says what to **thin**. See "How references collaborate" in [noslop-prose.md](noslop-prose.md).
 
 ---
 
@@ -21,9 +21,9 @@ State the situation in one sentence. No warm-up. No "In this sprint we will..."
 > "This is the first time I contribute to OPD Web — which is outside Identity domain completely — and that's exactly the Domain Expansion goal in action."
 
 Em dash inserts the "who else was involved" detail without breaking the main sentence.
-**Exception**: In IDP/management reports, use commas instead of em dashes (works with [anti-slop-prose.md](anti-slop-prose.md)).
+**Exception**: In IDP/management reports, use commas instead of em dashes (works with [noslop-prose.md](noslop-prose.md)).
 
-**Collaborating with [anti-slop-prose.md](anti-slop-prose.md):** Keep Pattern 2's **job** (coordination aside, scope note) on every draft. Prefer comma, colon, or parentheses for that aside so the sentence stays Farhan-shaped without AI-symbol clustering. Em dash stays valid when it matches this pattern *and* the user's sample or pasted source uses it — not as a default tic. Arrow glyphs (`→`) in prose become words ("to", "then") unless they are code or a quoted artifact; the aside content still follows Pattern 2.
+**Collaborating with [noslop-prose.md](noslop-prose.md):** Keep Pattern 2's **job** (coordination aside, scope note) on every draft. Prefer comma, colon, or parentheses for that aside so the sentence stays Farhan-shaped without AI-symbol clustering. Em dash stays valid when it matches this pattern *and* the user's sample or pasted source uses it — not as a default tic. Arrow glyphs (`→`) in prose become words ("to", "then") unless they are code or a quoted artifact; the aside content still follows Pattern 2.
 
 ### Pattern 3: Observation close (not summary)
 > "Note: May 14 was standup-only, mostly waiting on MWS MR review cycles"

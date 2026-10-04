@@ -105,7 +105,7 @@ All 97 locale files are indexed in [techniques/index.json](techniques/index.json
 - “Filipino English.” / “Taglish” (mix only if explicit)
 - “Irish English.” / “South African English.”
 - “Poetic English, thin.” / “Back to plain.”
-- “No em dash / no arrows / less AI-sounding.” → tighten per [anti-slop-prose.md](anti-slop-prose.md)
+- “No em dash / no arrows / less AI-sounding.” → tighten per [noslop-prose.md](noslop-prose.md)
 - “Write this in Japanese / Korean / Arabic / French / Italian / Tamil / Punjabi / German.” (load registry pack)
 - “Italiano / Switzerland Italian.” / “Tamil India / Sri Lanka.” / “Punjabi India / Pakistan.”
 - “Bolivia Spanish / Perú / Chile.” / “es-bo / es-pe / es-cl”
@@ -157,7 +157,7 @@ farhan_voice:
 | Taglish (explicit mix) | `regional_voice: ph-en` + user examples |
 | Irish English | `regional_voice: ie` |
 | South African English | `regional_voice: za` |
-| too fancy, simpler words, too AI, de-AI | keep `language`, tighten vocab ([core.md](core.md), [anti-slop-prose.md](anti-slop-prose.md)) |
+| too fancy, simpler words, too AI, de-AI | keep `language`, tighten vocab ([core.md](core.md), [noslop-prose.md](noslop-prose.md)) |
 | poetic, more lyrical | `prose_style: puitis` |
 | back to plain, don't be poetic | `prose_style: lugas` |
 | go neutral, no accent | `regional_voice: netral` |

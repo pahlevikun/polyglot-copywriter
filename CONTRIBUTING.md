@@ -4,7 +4,7 @@ Thank you for helping improve this skill. All **agent-facing** instructions must
 
 ## Prerequisites
 
-- Python 3.10+
+- Python 3.10+ (not installed? see [references/python-setup.md](references/python-setup.md))
 - From the skill root (`bundle/skills/builtin/polyglot-copywriter`):
 
 ```bash
@@ -17,7 +17,6 @@ Both must pass before you open a pull request.
 ## Add a language
 
 1. **Scaffold** — `python3 scripts/new_language.py <id> "<Name>"` (copies `_template/language/`).
-   - For bulk adds, see `scripts/bulk_add_wave3.py` as a reference pattern.
 2. **Fill packs** — edit `pack.md`, `registers.md`, `culture.md`. Add `speech-levels.md` or `overlays/` when needed.
    - Each `registers.md` needs one good + one bad example per register.
    - `culture.md` needs a **Natural grammar** section (agent instructions in English).

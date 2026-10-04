@@ -105,5 +105,5 @@ When X changes, Y no longer means the same thing.
 Where X only shows final state, Y records process.
 ```
 
-See [anti-slop-prose.md](../anti-slop-prose.md) pattern strength and
+See [noslop-prose.md](../noslop-prose.md) pattern strength and
 [review-prose.md](../review-prose.md) `Rewrite check:` when suggesting fixes.

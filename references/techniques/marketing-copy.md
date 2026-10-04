@@ -72,7 +72,7 @@ Aligns with [marketing/pack.md](../usecases/marketing/pack.md):
 
 **Ads / social:** hook → one proof fact → CTA. See [ads/pack.md](../usecases/ads/pack.md) and [social/pack.md](../usecases/social/pack.md).
 
-## Style pass (with core + anti-slop)
+## Style pass (with core + noslop)
 
 - Simple over complex; active over passive; confident over qualified
 - No fabricated stats, testimonials, or logos
@@ -91,5 +91,5 @@ Aligns with [marketing/pack.md](../usecases/marketing/pack.md):
 
 - [locales/japanese.md](locales/japanese.md) — キャッチコピー, soft CTA, 起承転結
 - [translation-vs-voice.md](translation-vs-voice.md) — native rewrite vs translate-then-polish
-- [anti-slop-prose.md](../anti-slop-prose.md) — always on
+- [noslop-prose.md](../noslop-prose.md) — always on
 - [humanize-workflow.md](humanize-workflow.md) — detect → rewrite → verify

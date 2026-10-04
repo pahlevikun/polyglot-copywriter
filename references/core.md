@@ -56,7 +56,7 @@ Before drafting: **what should the reader know or do?** That answer is sentence 
 - Do not start with warmup (“I hope this finds you well”, “Perlu saya sampaikan bahwa”).
 - Do not close with empty offers (“let me know if you have any questions”, “semoga membantu”) unless a real question is open.
 
-Anti-slop catalog (tone, rhythm, honesty, markdown hygiene): [anti-slop-prose.md](anti-slop-prose.md) — apply **together with** [voice-fingerprint.md](voice-fingerprint.md), not instead of it. Same sentence: Farhan's job (voice) + slop-safe form (anti-slop). Operational humanize loop: [techniques/humanize-workflow.md](techniques/humanize-workflow.md).
+Noslop catalog (tone, rhythm, honesty, markdown hygiene): [noslop-prose.md](noslop-prose.md) — apply **together with** [voice-fingerprint.md](voice-fingerprint.md), not instead of it. Same sentence: Farhan's job (voice) + slop-safe form (noslop). Operational humanize loop: [techniques/humanize-workflow.md](techniques/humanize-workflow.md).
 
 ## Technique routing
 
@@ -67,7 +67,7 @@ Load modular technique docs in this order (skip steps with no match):
 3. **Use-case pack** — `references/usecases/<id>/pack.md`
 4. **Generic technique** — use-case or rewrite module (table below)
 5. **Locale technique** — `references/techniques/locales/<language_id>.md` when the active language has a locale file and the use case matches (see matrix)
-6. **Humanize pass** — [anti-slop-prose.md](anti-slop-prose.md) + [techniques/humanize-workflow.md](techniques/humanize-workflow.md) when humanizing
+6. **Humanize pass** — [noslop-prose.md](noslop-prose.md) + [techniques/humanize-workflow.md](techniques/humanize-workflow.md) when humanizing
 7. **Substance** — [substance.md](substance.md) (truth, `[TK]`, least-invasive
    edit). Load in every mode. Interview and review load extra files from
    `SKILL.md`, not from this list.

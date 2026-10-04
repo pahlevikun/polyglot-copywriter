@@ -1,7 +1,7 @@
 {
   "name": "polyglot-copywriter",
   "version": "1.0.0",
-  "description": "Multilingual copywriter with dialect overlays: humanize, rewrite, and draft natural copy in 97 real languages with anti-slop prose.",
+  "description": "Multilingual copywriter with dialect overlays: humanize, rewrite, and draft natural copy in 97 real languages with noslop prose.",
   "author": {
     "name": "pahlevikun"
   },
@@ -14,13 +14,13 @@
     "humanize",
     "dialect",
     "marketing",
-    "anti-slop"
+    "noslop"
   ],
   "skills": "./",
   "interface": {
     "displayName": "Polyglot Copywriter",
-    "shortDescription": "97 languages, dialect overlays, anti-slop copy.",
-    "longDescription": "Registry-driven multilingual copywriter that loads language packs, regional overlays, and use-case structures on demand. Simple prose and anti-slop by default; optional Farhan fingerprint for English and Bahasa Indonesia.",
+    "shortDescription": "97 languages, dialect overlays, noslop copy.",
+    "longDescription": "Registry-driven multilingual copywriter that loads language packs, regional overlays, and use-case structures on demand. Simple prose and noslop by default; optional Farhan fingerprint for English and Bahasa Indonesia.",
     "developerName": "pahlevikun",
     "category": "Productivity",
     "brandColor": "#13161B",
