@@ -1,4 +1,4 @@
-# Review Writing — Farhan Yuda Pahlevi
+# Review Writing
 
 Covers: MR code review comments, 360 peer feedback, self-assessments.
 
@@ -6,39 +6,39 @@ Covers: MR code review comments, 360 peer feedback, self-assessments.
 
 ## MR Code Review Comments
 
-**Corpus**: 118 non-trivial comments, Jan–Jul 2026, across merchant-workflow-service, hermes, curator, self-serve-corp-onboarding, gobiz-selfserve-flow, mp-script-runner, and others.
+**Corpus**: 118 non-trivial review comments from one engineer, across several backend and workflow services.
 
 ### The 6 Core MR Review Rules
 
 1. **"Can we...?" is the proposal vehicle** — never "you should". Suggestions are framed as team questions. (24 instances — the dominant pattern.)
 2. **Close every proposal with a question** — `right?`, `ya?`, `wdyt?`. Never fully asserts even when clearly right.
-3. **"we" not "you"** — 3.5× more likely. Farhan reviews as a teammate, not an evaluator above the author.
+3. **"we" not "you"** — 3.5× more likely. the author reviews as a teammate, not an evaluator above the author.
 4. **Direct imperatives only for hygiene** — `please remove`, `please add changelog`, `please update`. Never imperative on architecture decisions.
 5. **"I think" hedges opinions** — "I think we can remove this inline comment" vs. flat "remove this".
 6. **"bang [name]" softens requests** — Indonesian honorific (`bang` = roughly "mate/bro for peer or older"). Makes direct asks feel collegial.
 
-### Sampled Real Comments (verbatim, 2026)
+### Sample Comments (anonymized)
 
 **Proposals with "can we":**
-- `Can we use FlowEngine client here? if not exist I think we can create a new one`
+- `Can we use the workflow client here? if not exist I think we can create a new one`
 - `can we define the error in errors.go? should be easier to test and read all error we have in this workflow`
-- `bang can we add jitter here? I think we need to avoid thundering herd in flow-engine from burst hit`
+- `bang can we add jitter here? I think we need to avoid thundering herd in the workflow service from burst hit`
 - `I saw lot of raw query in this handler, can we create a repo layer instead? Seems we can leverage this as application layer feature instead of workflow layer.`
 - `can we put timeout in each task?`
 
 **Hygiene / nit delivery (only place for imperatives):**
 - `bang minor ya, please remove the comment` (appears 4×)
-- `bang wil, can we remove this inline doc? I feel this isn't really helpful`
+- `bang [name], can we remove this inline doc? I feel this isn't really helpful`
 - `personally this is AI slop, I think we are clear on this step without any inline comment`
 
 **Confirmation-seeking tail "right?":**
 - `This technically will never be reached, right? We are passing maxAttempts from config...`
 - `if it's not found in the payload or throwing error, the expectation is it will use the default flow and namespace, right?`
-- `@nico.pratama if gofoodProduct.comfee_exclude_mfp is undefined, the condition become true, right? is it expected?`
+- `@teammate if order.discount_flag is undefined, the condition become true, right? is it expected?`
 
 **Security / architecture concern (longer comments):**
 - `I suggest to keep the error response generic and just log failureReasons. If we expose failureReasons to the public, I don't think we'll pass the security sign-off.`
-- `I'm still have doubts about the idempotency approach as we'll be relying on db connection pooling. Considering this MWS is accessed by many services, if the database connections run out, this app will go down.`
+- `I'm still have doubts about the idempotency approach as we'll be relying on db connection pooling. Considering this service is accessed by many services, if the database connections run out, this app will go down.`
 
 **Approval / agreement:**
 - `agree pack 🫡`
@@ -58,7 +58,7 @@ Closing question is almost never skipped.
 
 ### Nit Delivery
 
-Farhan does NOT use `nit:` prefix. His nit pattern is:
+the author does NOT use `nit:` prefix. His nit pattern is:
 - `bang minor ya, please remove the comment`
 - `minor` + direct ask + `ya` softener
 
@@ -93,7 +93,7 @@ The word "nit" appears **0 times** in 118 comments. "minor" appears 4 times, alw
 ### Core Principles
 
 1. **Behavior + Impact structure** — name the observable thing, then name the effect it had
-2. **Specific over general** — "Raka's Hermes rollout coordination" > "Raka is great at coordination"
+2. **Specific over general** — "Sam's payments rollout coordination" > "Sam is great at coordination"
 3. **Evidence-based** — must be tied to something that actually happened
 4. **Warm but direct** — honest even when giving development feedback
 
@@ -111,24 +111,24 @@ One area to grow: [specific pattern]. In [specific context], [what happened / wh
 This would help [specific outcome for the team/project].
 ```
 
-### Sampled Patterns (inferred from IDP + Farhan's team context)
+### Sampled Patterns (inferred from IDP + the author's team context)
 
 Strength example:
-> "Raka consistently picks up ownership on ambiguous cross-system issues — the Hermes authz migration is a clear example. He didn't wait for full spec, drove the technical direction, and unblocked the team. That kind of initiative changes the team's velocity."
+> "Sam consistently picks up ownership on ambiguous cross-system issues — the auth service migration is a clear example. They didn't wait for a full spec, drove the technical direction, and unblocked the team. That kind of initiative changes the team's velocity."
 
 Development example:
-> "One thing I'd like to see more of: Vitorio taking a position early in design discussions. Often the right read is there, but it surfaces late. Earlier visibility on his perspective would improve decision speed."
+> "One thing I'd like to see more of: Alex taking a position early in design discussions. Often the right read is there, but it surfaces late. Earlier visibility on their perspective would improve decision speed."
 
 ### 70/20/10 Connection (for self-assessment)
 
 When writing self-assessment, connect behaviors to IDP categories:
-- Experience (70%): "On the CUI implementation, I drove X end-to-end..."
-- Exposure (20%): "The Hermes deprecation discussion surfaced cross-domain exposure..."
-- Education (10%): "The onboarding-service deep dive gave me context on..."
+- Experience (70%): "On the checkout redesign, I drove X end-to-end..."
+- Exposure (20%): "The legacy service deprecation discussion surfaced cross-domain exposure..."
+- Education (10%): "The onboarding flow deep dive gave me context on..."
 
 ### Format Preferences
 
-| Element | Farhan's approach |
+| Element | the author's approach |
 |---|---|
 | Length | 2–4 sentences per point — no paragraphs |
 | Pronouns | Second person for feedback ("you", "your"), first for self-assessment ("I") |

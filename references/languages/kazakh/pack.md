@@ -1,6 +1,6 @@
 # Kazakh — language pack
 
-**Status:** `validated`. Write as a careful coworker in Kazakh; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Kazakh; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

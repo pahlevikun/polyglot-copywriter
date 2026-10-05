@@ -12,15 +12,15 @@
 
 ## Honesty
 
-Default Farhan Indonesian is **work chat**: `saya` + `mas`/`kak`, simple words, impact-first. City overlays add colour at `tipis`/`sedang`; do not require `gue`/`lo` for Jakarta.
+Default the author Indonesian is **work chat**: `saya` + `mas`/`kak`, simple words, impact-first. City overlays add colour at `tipis`/`sedang`; do not require `gue`/`lo` for Jakarta.
 
 ## Default register
 
 `santai` — **not** full gaul slang. `profesional` and `baku` on request. EYD / formal spelling only on `baku`.
 
-## Farhan fingerprint
+## the author fingerprint
 
-Load [voice-fingerprint.md](../../voice-fingerprint.md) when writing as Farhan in Indonesian.
+Load [voice-fingerprint.md](../../voice-fingerprint.md) when writing as the author in Indonesian.
 
 ## When to ask
 

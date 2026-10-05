@@ -1,6 +1,6 @@
 # Spanish — language pack
 
-**Status:** `validated`. Write as a careful coworker in Spanish; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Spanish; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

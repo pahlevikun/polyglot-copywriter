@@ -8,7 +8,7 @@
 
 ## Pronouns
 
-- `I` / `we` for ownership and coordination (Farhan fingerprint when active).
+- `I` / `we` for ownership and coordination (the author fingerprint when active).
 - `you` for the reader. External email uses their name, not honorifics.
 
 ## Examples

@@ -17,7 +17,7 @@ Contribution, claim, or recommendation — not flattery opener.
 
 ## Register
 
-Default `baku`. No Farhan slang, marketing superlatives, or chat particles unless user quoted them.
+Default `baku`. No the author slang, marketing superlatives, or chat particles unless user quoted them.
 
 ## Cross-language rules
 

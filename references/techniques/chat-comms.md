@@ -34,7 +34,7 @@ Default `santai` for chat use case. Upgrade to `profesional` for customer-facing
 | korean | [locales/korean.md](locales/korean.md) § Email / chat |
 | mandarin | [locales/mandarin.md](locales/mandarin.md) § Email / WeChat |
 
-English / Indonesian Farhan chat: [core.md](../core.md) + [voice-fingerprint.md](../voice-fingerprint.md).
+English / Indonesian the author chat: [core.md](../core.md) + [voice-fingerprint.md](../voice-fingerprint.md).
 
 ## Good vs bad
 

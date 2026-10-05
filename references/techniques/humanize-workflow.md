@@ -85,7 +85,7 @@ After thinning clusters, check the draft is not **technically clean but lifeless
 | Reference | Role in humanize pass |
 |---|---|
 | [noslop-prose.md](../noslop-prose.md) | Pattern catalog + symbol hygiene |
-| [voice-fingerprint.md](../voice-fingerprint.md) | Keep Farhan markers (EN/ID) |
+| [voice-fingerprint.md](../voice-fingerprint.md) | Keep the author markers (EN/ID) |
 | [core.md](../core.md) | Register, vocab, protected artifacts |
 | [english-humanizer.md](../usecases/english-humanizer.md) | Extended EN pattern library |
 | [natural-writing.md](natural-writing.md) | Plain sentence + calque pass (all langs) |

@@ -1,6 +1,6 @@
 # Yoruba — language pack
 
-**Status:** `validated`. Write as a careful coworker in Yoruba; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Yoruba; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

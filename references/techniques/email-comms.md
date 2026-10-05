@@ -39,7 +39,7 @@ After this file, load locale technique when `language` matches:
 | hindi | [locales/hindi.md](locales/hindi.md) § Email |
 | tagalog | [locales/tagalog.md](locales/tagalog.md) § Email |
 
-English / Indonesian: [core.md](../core.md) + [voice-fingerprint.md](../voice-fingerprint.md) when Farhan voice.
+English / Indonesian: [core.md](../core.md) + [voice-fingerprint.md](../voice-fingerprint.md) when the author voice.
 
 ## Good vs bad (pattern)
 

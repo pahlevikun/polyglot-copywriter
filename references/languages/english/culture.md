@@ -16,7 +16,7 @@
 
 ## Humor and taboo
 
-- Dry observation close is OK (Farhan fingerprint).
+- Dry observation close is OK (the author fingerprint).
 - Avoid sarcasm at someone's expense in MR review or incident text.
 
 ## Natural grammar

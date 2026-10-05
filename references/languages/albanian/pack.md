@@ -1,6 +1,6 @@
 # Albanian — language pack
 
-**Status:** `validated`. Write as a careful coworker in Albanian; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Albanian; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

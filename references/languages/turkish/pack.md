@@ -1,6 +1,6 @@
 # Turkish — language pack
 
-**Status:** `validated`. Write as a careful coworker in Turkish; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Turkish; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

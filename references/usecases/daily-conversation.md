@@ -1,6 +1,6 @@
-# Daily Conversation — Farhan Yuda Pahlevi
+# Daily Conversation
 
-Corpus: 34 top-level + 77 thread replies = 111 Lark messages across 9 channels, May–Aug 2026.
+Patterns drawn from a corpus of real chat messages.
 Context: primarily CUI (Change User Information) project coordination.
 Note: previous version was inferred from IDP docs — this version is from real messages.
 
@@ -102,7 +102,7 @@ Closes with "We will target this by today" or a specific time commitment.
 ## Status Update Patterns
 
 - "deployed kak @X"
-- "now it's there mas inside go-jek.com domain"
+- "now it's there mas inside example.com domain"
 - "@X it's working fine mas, thankyou" + "shown as expected" (two one-liners, confirming same thing)
 - "the team informed that FR is working, you can retry the flow"
 - Never "Done." alone — always attaches where/what/result.
@@ -129,9 +129,9 @@ Sparse (~5% of messages). Functional only:
 
 No 🔧, 🚨, 👀 in casual Lark. Those are incident response or review emoji, not everyday channel chat.
 
-Use `*bold*` only for template names or precise technical nouns: `**self_serve_change_phone**`
+Use `*bold*` only for template names or precise technical nouns: `**update_phone**`
 
-No closing punctuation on short messages: "Sure mas" not "Sure, mas." — correct Farhan style.
+No closing punctuation on short messages: "Sure mas" not "Sure, mas." — correct the author style.
 
 ---
 
@@ -148,7 +148,7 @@ No closing punctuation on short messages: "Sure mas" not "Sure, mas." — correc
 
 ---
 
-## What Farhan Does NOT Do in Lark
+## What the author Does NOT Do in Lark
 
 - ❌ "Hi [name], hope you're well! I wanted to reach out about..."
 - ❌ "Good afternoon team, I would like to inform you that..."

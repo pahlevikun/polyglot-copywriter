@@ -12,7 +12,7 @@ These guides are **peers**, not a stack where one overrides another. Apply them 
 |---|---|
 | [core.md](core.md) | Language bar, vocab, register, protected artifacts |
 | [simple-prose.md](simple-prose.md) | Simple vocabulary and grammar default for every language |
-| [voice-fingerprint.md](voice-fingerprint.md) | Farhan's real sentence shapes, trademark phrases, corpus markers |
+| [voice-fingerprint.md](voice-fingerprint.md) | the author's real sentence shapes, trademark phrases, corpus markers |
 | **This file** | AI cluster tells, symbol hygiene, honesty, markdown spam |
 | [humanizer-patterns.md](humanizer-patterns.md) | The 26-tell catalog, strongest first, with before/after examples and file/embedded/pasted output modes |
 | [noslop-doctrine.md](noslop-doctrine.md) | Principles ("sharp detail beats inflated significance"), extra detectors, critique format, rewrite self-check |
@@ -22,11 +22,11 @@ These guides are **peers**, not a stack where one overrides another. Apply them 
 
 **Collaboration rules:**
 
-1. **Voice + noslop together.** Thin AI clusters *and* keep Farhan markers. If a phrase is in the real corpus ([voice-fingerprint.md](voice-fingerprint.md)) and not an AI tell, keep it even while cutting nearby slop.
+1. **Voice + noslop together.** Thin AI clusters *and* keep the author markers. If a phrase is in the real corpus ([voice-fingerprint.md](voice-fingerprint.md)) and not an AI tell, keep it even while cutting nearby slop.
 2. **Same job, different form.** When [voice-fingerprint.md](voice-fingerprint.md) calls for a coordination aside (Pattern 2), [noslop-prose.md](noslop-prose.md) prefers comma, colon, or parentheses over em dash — same rhetorical job, slop-safe punctuation. Arrows in prose (`→`) still become words ("to", "then") unless they are code or a quoted artifact.
 3. **User sample is a third collaborator.** Match the sample's rhythm, punctuation habits, and markers. Still apply honesty rules (no new fabricated facts). Do not strip deliberate sample choices while thinning *unrequested* AI clustering in generated filler.
 4. **Use-case files add format.** Email, MR review, RFC, and the rest layer channel rules on top; they do not replace core, voice, or noslop.
-5. **Clusters, not veto.** One em dash, one "however", or one short fragment is not a failure by itself. Cross-check both files before cutting something that sounds like Farhan.
+5. **Clusters, not veto.** One em dash, one "however", or one short fragment is not a failure by itself. Cross-check both files before cutting something that sounds like the author.
 6. **Earned patterns stay.** A concrete list of three operational checks,
    an academic hedge the evidence requires, or a docs heading pattern is
    not slop. Adjudicate in context ([substance.md](substance.md)). Do not
@@ -38,7 +38,7 @@ These guides are **peers**, not a stack where one overrides another. Apply them 
 ## Two global rules
 
 1. **Never invent facts.** No fabricated numbers, testimonials, names, dates, quotes, or citations. Specificity comes from the source or the user. If a sentence needs real detail to work, ask for it or write the plain version without it.
-2. **Do not over-sterilize.** Scrubbing AI tells but killing voice is also a tell. Keep Farhan markers ([voice-fingerprint.md](voice-fingerprint.md), `SKILL.md` Step 3.5). When the user supplies a writing sample, collaborate with it: match voice habits and still thin AI clusters that were not in the sample.
+2. **Do not over-sterilize.** Scrubbing AI tells but killing voice is also a tell. Keep the author markers ([voice-fingerprint.md](voice-fingerprint.md), `SKILL.md` Step 3.5). When the user supplies a writing sample, collaborate with it: match voice habits and still thin AI clusters that were not in the sample.
 
 ## Symbol and punctuation hygiene (prose)
 
@@ -197,8 +197,8 @@ When the task is prose for people to read, follow [humanize-workflow.md](techniq
 - [ ] No excessive scare quotes, ALL-CAPS emphasis, or emoji decoration in headings
 - [ ] Actors named where known; no abstraction given a human mind verb
 - [ ] No dense AI-rhythm clusters (rule of three, negative parallelism, staccato drama, aphorisms, false ranges)
-- [ ] Farhan markers from [voice-fingerprint.md](voice-fingerprint.md) still present — not a sterile scrub
-- [ ] Read aloud: sounds like Farhan wrote it, not a model padded it
+- [ ] the author markers from [voice-fingerprint.md](voice-fingerprint.md) still present — not a sterile scrub
+- [ ] Read aloud: sounds like the author wrote it, not a model padded it
 
 ---
 

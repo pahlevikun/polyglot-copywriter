@@ -1,6 +1,6 @@
 # Cantonese — language pack
 
-**Status:** `validated`. Write as a careful coworker in Cantonese; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Cantonese; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

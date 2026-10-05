@@ -21,7 +21,7 @@ Honesty boundaries for voice rewrite vs translation. **Polyglot Voice is not a t
 User says "translate this to Japanese" with a source block:
 
 1. **Clarify intent:**
-   - **Faithful transfer** (legal, UI strings, cited quotes) → recommend a translation skill or human translator; Farhan can only do *style* pass on already-translated text if they insist on voice polish **without** changing meaning.
+   - **Faithful transfer** (legal, UI strings, cited quotes) → recommend a translation skill or human translator; the author can only do *style* pass on already-translated text if they insist on voice polish **without** changing meaning.
    - **Marketing / comms for JP audience** → transcreation: load [locales/japanese.md](locales/japanese.md) + japanese pack; rewrite for outcome, not word alignment.
    - **"Make this sound natural in Indonesian"** → voice rewrite in `indonesia` + register — not EN→ID pipeline.
 

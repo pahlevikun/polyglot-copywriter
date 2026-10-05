@@ -24,7 +24,7 @@ Urban spoken Indonesian: concise, responsive, easy shift between neutral and con
 
 ## Pronouns
 
-- Default remains **`saya` + `mas`/`kak`** (Farhan work chat).
+- Default remains **`saya` + `mas`/`kak`** (the author work chat).
 - `gue`/`lo` only at `sedang`+ when user chose them, already uses them, or closeness is clear.
 - `aku`/`kamu` and `saya`/`Anda` remain valid. Dropping pronouns is often more natural than forcing `gue`/`lo`.
 

@@ -1,23 +1,29 @@
 # Polyglot Copywriter
 
-A reader gives you their attention one sentence at a time — in whatever language and register they actually use. **Polyglot Copywriter** is an agent skill that earns that attention across **97 real languages**, **163 dialect overlays**, and **18 use-case structures** without inventing facts the source never supplied.
+A reader gives you their attention one sentence at a time — in whatever language and register they actually use. **Polyglot Copywriter** is an agent skill that earns that attention across **97 real languages**, **163 dialect overlays**, and **23 use-case structures** without inventing facts the source never supplied.
 
 Most humanize skills scrub surface tells (em dashes, "delve," rule-of-three lists) and call it done. Generic model prose fails **before** style: no source, no attribution, no mechanism, no author judgment. This skill fixes substance first — then simple prose, noslop, and optional voice fingerprint — and keeps language packs honest about what they support.
 
 ## Install
 
-Install with [skills.sh](https://skills.sh) (or any compatible agent-skills CLI):
+Install with a compatible agent-skills CLI (`npx skills add`, and similar):
 
 ##### NPM
 
 ```bash
-npx skills add farhanpahlevi/polyglot-copywriter
+# Monorepo path — replace <owner>/<repo> with your fork
+npx skills add <owner>/<repo>/bundle/skills/builtin/polyglot-copywriter
+
+# Standalone repo
+npx skills add pahlevikun/polyglot-copywriter
 ```
 
 ##### pnpm
 
 ```bash
-pnpm dlx skills add farhanpahlevi/polyglot-copywriter
+pnpm dlx skills add <owner>/<repo>/bundle/skills/builtin/polyglot-copywriter
+# or
+pnpm dlx skills add pahlevikun/polyglot-copywriter
 ```
 
 After install, enable the skill in your agent; it loads `SKILL.md` automatically.
@@ -61,7 +67,20 @@ Rules that hold in every mode: keep every supported claim, add no fact, name, nu
 
 The `/polyglot-humanize` command runs this directly on a draft or file.
 
-Credits: [blader/humanizer](https://github.com/blader/humanizer) (MIT, Siqi Chen), the `anti-slop-writing` skill (MIT, Ade Oshineye), and the `plain-writing` skill (merged into simple-prose.md). Licences are in [references/third-party/](references/third-party/humanizer-LICENSE). The humanizer patterns come from Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing).
+## Reader shapes and the send gate
+
+Some pieces need a shape for the person reading, not only clean sentences. These packs load on a matching request. `action-first` and `digest` load only when asked.
+
+| Pack | Use it for | What it enforces |
+|---|---|---|
+| [`action-first`](references/usecases/action-first/pack.md) | Replies, checklists and notes for readers who need to act fast, including ADHD-friendly output | The first line is an action, steps are numbered, one next step ends the text, time estimates carry a basis, no wrapper. Stays on for the session until you say "stop adhd mode". |
+| [`pr-description`](references/usecases/pr-description/pack.md) | PR and MR bodies, commit messages, changelog lines | Why before what, breaking changes up front, the repo template filled as written, a checkbox ticked only for a step that was run |
+| [`ticket-comment`](references/usecases/ticket-comment/pack.md) | Progress, decision and blocker comments on a ticket | The decision and its trade-off first, not a list of edits |
+| [`digest`](references/usecases/digest/pack.md) | Long docs, threads and old notes | Decisions, constraints and open questions, with what is only proposed marked as proposed |
+
+Text that goes out in your name to other people (email, chat, ticket or MR comments, public posts) is shown as a draft first and sent only after you agree. The rule is in [references/substance.md](references/substance.md#send-gate).
+
+The `/polyglot-action` command turns the action-first shape on for a reply or for the session.
 
 ## On copy that earns its reader
 
@@ -261,7 +280,6 @@ polyglot-copywriter/
 ├── commands/                         optional slash wrappers (see below)
 │   ├── polyglot-interview.md         /polyglot-interview
 │   ├── polyglot-rewrite.md           /polyglot-rewrite
-│   ├── polyglot-humanize.md          /polyglot-humanize
 │   ├── polyglot-review.md            /polyglot-review
 │   └── polyglot-lint.md              /polyglot-lint
 ├── docs/
@@ -304,14 +322,13 @@ If you prefer dedicated slash commands, copy the wrappers in `commands/`:
 cp commands/*.md ~/.claude/commands/
 ```
 
-That gives `/polyglot-interview`, `/polyglot-rewrite`, `/polyglot-humanize`, `/polyglot-review`, and
+That gives `/polyglot-interview`, `/polyglot-rewrite`, `/polyglot-review`, and
 `/polyglot-lint` (filenames match slash names).
 
 | Slash command | Mode | Extra reference |
 |---|---|---|
 | `/polyglot-interview` | co-write | [`interview.md`](references/interview.md) |
 | `/polyglot-rewrite` | rewrite (incl. `humanize`) | [`substance.md`](references/substance.md) |
-| `/polyglot-humanize` | rewrite (humanize pass, 26 tells) | [`humanizer-patterns.md`](references/humanizer-patterns.md) |
 | `/polyglot-review` | review | [`review-prose.md`](references/review-prose.md) |
 | `/polyglot-lint` | lint / stats | [`evaluation.md`](references/evaluation.md) self-check |
 
@@ -376,7 +393,7 @@ Every language row must pass schema checks and link integrity before merge (`val
 From the skill root:
 
 ```bash
-cd polyglot-copywriter   # or your cloned skill root
+cd skills/engineering/polyglot-copywriter   # or your cloned skill root
 python3 scripts/validate_skill.py
 python3 -m unittest discover -s tests -q
 python3 scripts/evaluate_output.py <case-id> <output-file>
@@ -418,7 +435,7 @@ Counts from [`references/registry.json`](references/registry.json) (schema v2) a
 | Speech-level languages | 5 | Jawa, Sunda, Bali, Japanese, Korean |
 | Umbrella languages | 3 | `arabic`, `dayak`, `kurdish` — ask for variety before thick prose |
 | Fictional fixtures | 4 | `atlantis`, `klingon`, `elvish`, `navi` — eval/honesty only; not in registry |
-| Use cases | 18 | Structure only, not language rules |
+| Use cases | 23 | Structure only, not language rules |
 
 ## How it works
 
@@ -430,7 +447,7 @@ Instead of one giant prompt, the skill is a **thin router** (`SKILL.md`) that lo
 4. **Optional overlay** — When `regional_voice` is set (or the user names a dialect), load the matching overlay under `overlays/` and, if helpful, a snapshot from [`references/profiles/`](references/profiles/).
 5. **Optional use case** — Email, marketing, incident, chat, and similar ids load `references/usecases/<id>/pack.md` for **structure only**.
 6. **Technique modules** — Generic techniques first; then a locale file from [`techniques/locales/<lang>.md`](references/techniques/locales/) when one exists.
-7. **Voice pipeline** — Core ([`core.md`](references/core.md)), simple prose ([`simple-prose.md`](references/simple-prose.md)), noslop ([`noslop-prose.md`](references/noslop-prose.md)), substance ([`substance.md`](references/substance.md)), optional Farhan fingerprint ([`voice-fingerprint.md`](references/voice-fingerprint.md) — EN/ID only), then evaluation ([`evaluation.md`](references/evaluation.md)).
+7. **Voice pipeline** — Core ([`core.md`](references/core.md)), simple prose ([`simple-prose.md`](references/simple-prose.md)), noslop ([`noslop-prose.md`](references/noslop-prose.md)), substance ([`substance.md`](references/substance.md)), optional the author fingerprint ([`voice-fingerprint.md`](references/voice-fingerprint.md) — EN/ID only), then evaluation ([`evaluation.md`](references/evaluation.md)).
 8. **Output** — Natural prose in the target language, register, and dialect — with protected artifacts (numbers, names, links) preserved.
 
 ### Modes (after language routing)
@@ -491,8 +508,3 @@ flowchart TD
 - [Politics and the English Language](https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/), George Orwell.
 - [The Day You Became a Better Writer](https://dilbertblog.typepad.com/the_dilbert_blog/2007/06/the_day_you_bec.html), Scott Adams.
 - [Write Like You Talk](https://www.paulgraham.com/talk.html) and [Writing, Briefly](https://www.paulgraham.com/writing44.html), Paul Graham.
-- [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup.
-
-## License
-
-MIT — Copyright (c) 2026 Farhan Pahlevi. See [LICENSE](LICENSE).

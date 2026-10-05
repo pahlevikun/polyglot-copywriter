@@ -93,7 +93,7 @@ LOCALE_PROFILE = {
     },
     "english": {
         "usecases": "default",
-        "note": "Register notes for in-en, au, uk overlays — Farhan fingerprint applies by default.",
+        "note": "Register notes for in-en, au, uk overlays — the author fingerprint applies by default.",
         "extra": """
 ## Register notes (English varieties)
 
@@ -104,7 +104,7 @@ LOCALE_PROFILE = {
 | `au` | Australian light markers — avoid caricature |
 | `in-en` | Indian English — formal complete sentences; Hinglish only if explicit |
 
-Farhan fingerprint: [voice-fingerprint.md](../../voice-fingerprint.md). Locale file supplements overlay packs, not core.md.
+the author fingerprint: [voice-fingerprint.md](../../voice-fingerprint.md). Locale file supplements overlay packs, not core.md.
 """,
     },
 }

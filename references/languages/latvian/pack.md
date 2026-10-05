@@ -1,6 +1,6 @@
 # Latvian — language pack
 
-**Status:** `validated`. Write as a careful coworker in Latvian; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Latvian; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

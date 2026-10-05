@@ -1,6 +1,6 @@
 # Noslop doctrine
 
-Principles, detectors and critique format for important prose. Merged from the `anti-slop-writing` skill (MIT, Ade Oshineye, licence in [third-party/anti-slop-writing-LICENSE](third-party/anti-slop-writing-LICENSE)).
+Principles, detectors and critique format for important prose.
 
 Load for a full prose review, for essays, talks, launch copy, README and docs text, or when a draft is clean at sentence level but still reads generic. The pattern catalog is [humanizer-patterns.md](humanizer-patterns.md). The always-on scan is [noslop-prose.md](noslop-prose.md). Relation and flow work is in [techniques/flow-by-relation.md](techniques/flow-by-relation.md). This file adds the principles and the checks those files do not hold.
 

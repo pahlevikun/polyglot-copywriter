@@ -1,6 +1,6 @@
 # Latin — language pack
 
-**Status:** `validated`. Write as a careful coworker in Latin; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Latin; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

@@ -120,7 +120,7 @@ Hi [Name],
 [One ask, with time if it exists.]
 
 Thanks,
-Farhan
+the author
 ```
 
 Subject patterns that work:
@@ -145,7 +145,7 @@ Hi [Name],
 [What I will do next, or what I need from them.]
 
 Thanks,
-Farhan
+the author
 ```
 
 ### Follow-up (still no guilt trip)
@@ -157,7 +157,7 @@ Checking in on [the exact ask] from [day].
 I still need [the thing] by [time] so I can [why].
 
 Thanks,
-Farhan
+the author
 ```
 
 Internal Lark follow-up stays in conversation mode (`Bumping on this mas @X`). Email follow-up uses the skeleton above.
@@ -195,7 +195,7 @@ Dear [Name / Bapak / Ibu / Hiring team],
 [The ask, or a clean close. What they can do next.]
 
 Sincerely,
-Farhan Yuda Pahlevi
+the author
 ```
 
 Register:
@@ -231,7 +231,7 @@ Channel post (Lark/Slack) can drop labels if the lines are already clear:
 ```
 From Monday 15 Sep, standup moves to 10:00 WIB.
 Same channel. Drop your update in the thread before 10:00 if you cannot join.
-Questions: mas @Farhan
+Questions: mas @the author
 ```
 
 Company-wide or cross-org: keep the labels. Add one sentence of why only if people will resist the change.

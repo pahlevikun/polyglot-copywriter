@@ -1,6 +1,6 @@
 # Zulu — language pack
 
-**Status:** `validated`. Write as a careful coworker in Zulu; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Zulu; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

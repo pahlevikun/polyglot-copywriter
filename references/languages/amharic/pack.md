@@ -1,6 +1,6 @@
 # Amharic — language pack
 
-**Status:** `validated`. Write as a careful coworker in Amharic; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Amharic; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

@@ -14,7 +14,7 @@
 
 ## What santai is not
 
-- **Not automatically `gue`/`lo`.** Farhan's everyday Indonesian is `saya` + `mas`/`kak`.
+- **Not automatically `gue`/`lo`.** the author's everyday Indonesian is `saya` + `mas`/`kak`.
 - Not Gen-Z slang quota (`gas`, `mantul`) in technical diagnosis or incident text.
 - Not dropping grammar in email or letters — those use `profesional` or `baku` when requested.
 
@@ -31,4 +31,4 @@ Every register uses [simple-prose.md](../../simple-prose.md): kata sehari-hari, 
 | santai, kasual, gaul (without banning saya) | `register: santai` |
 | gue/lo, very Jakarta gaul | `regional_voice: jakarta` + honor user ban on pronouns |
 
-Legacy detail for formal/semi-formal examples: see [bahasa-registers.md](../bahasa-registers.md) for extended samples; **default pronoun rule above overrides** Register 3's `gue`/`lo` default for Farhan santai.
+Legacy detail for formal/semi-formal examples: see [bahasa-registers.md](../bahasa-registers.md) for extended samples; **default pronoun rule above overrides** Register 3's `gue`/`lo` default for the author santai.

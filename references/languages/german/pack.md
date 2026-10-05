@@ -1,6 +1,6 @@
 # German — language pack
 
-**Status:** `validated`. Write as a careful coworker in German; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in German; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

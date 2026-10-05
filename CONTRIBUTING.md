@@ -5,7 +5,7 @@ Thank you for helping improve this skill. All **agent-facing** instructions must
 ## Prerequisites
 
 - Python 3.10+ (not installed? see [references/python-setup.md](references/python-setup.md))
-- From the skill root (`bundle/skills/builtin/polyglot-copywriter`):
+- From the skill root (`skills/engineering/polyglot-copywriter`):
 
 ```bash
 python3 scripts/validate_skill.py
@@ -86,4 +86,4 @@ Run `python3 scripts/evaluate_output.py <case-id> <output-file>` to test a draft
 
 ## License
 
-By contributing, you agree that your contributions are licensed under the [MIT License](LICENSE).
+By contributing, you agree that your contributions are licensed under the same terms as the repository root `LICENSE`.

@@ -1,6 +1,6 @@
 # Arabic — language pack
 
-**Status:** `validated`. Write as a careful coworker in Arabic; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Arabic; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

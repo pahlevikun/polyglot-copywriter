@@ -12,4 +12,4 @@ Bandung/Sunda-influenced Indonesian overlay — not full Sundanese (`language: s
 
 **Work chat:** `saya` default; `mas`/`kak` on names in internal teams.
 
-**Locale:** [locales/indonesia.md](../techniques/locales/indonesia.md) for marketing Shopee/Tokopedia and incident patterns.
+**Locale:** [locales/indonesia.md](../techniques/locales/indonesia.md) for marketplace marketing and incident patterns.

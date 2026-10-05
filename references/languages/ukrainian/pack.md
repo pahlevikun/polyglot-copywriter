@@ -1,6 +1,6 @@
 # Ukrainian — language pack
 
-**Status:** `validated`. Write as a careful coworker in Ukrainian; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Ukrainian; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 
