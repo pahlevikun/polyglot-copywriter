@@ -1,13 +1,12 @@
-# Technical Writing — Farhan Yuda Pahlevi
+# Technical Writing
 
-Extracted from: Backfill Contract RFC, Intermittent Login Failures Analysis (Lark docs),
-ADR for Self-serve Change Phone/Email for Merchant.
+Patterns for RFCs, incident analyses and ADRs.
 
 ---
 
 ## Document Structure Template
 
-Farhan's technical docs follow this skeleton regardless of type (RFC, ADR, incident analysis):
+the author's technical docs follow this skeleton regardless of type (RFC, ADR, incident analysis):
 
 ```
 1. Background          — number first, then problem statement
@@ -26,11 +25,11 @@ Farhan's technical docs follow this skeleton regardless of type (RFC, ADR, incid
 
 State the scale or impact before the background:
 
-> "~2.99 million active GoFood contracts in Curator have `comfee_exclude_mfp` and/or `vat_calculation_type` stuck at `UNSPECIFIED` — a leftover from before the GoFood billing migration."
+> "~2.4 million active subscriptions in the billing service have `discount_mode` and/or `tax_type` stuck at `UNSET` — a leftover from before the pricing migration."
 
-> "Peak GOID call is 27K RPM"
+> "Peak login lookup rate is 18K RPM"
 
-> "7 Redix restarts between Jul 1 00:17 and Jul 2 10:02 WIB (~34 hours of instability)"
+> "5 cache restarts between Mar 3 00:17 and Mar 4 10:02 UTC (~34 hours of instability)"
 
 Formula: `[specific count/metric] [entity] [have/are] [problem] — [root cause in one clause]`
 
@@ -51,10 +50,10 @@ Analogies come BEFORE the technical explanation, not after.
 For ordered decision logic, use ① ② ③ ④ (not bullets, not numbered lists):
 
 ```
-① comfee = INCLUDE_MFP (GOBER) → call evaluate-rules → if mismatch AND force=true → GOBER_PATCHED
-② vat != UNSPECIFIED AND comfee != UNSPECIFIED → NOT_UNSPECIFIED_SKIP
-③ package not in Zeus reference → raise ValueError → _errors.csv
-④ at least one UNSPECIFIED + package found → PATCH → PATCHED / DRY_RUN
+① discount_mode = LEGACY → call evaluate-rules → if mismatch AND force=true → LEGACY_PATCHED
+② tax_type != UNSET AND discount_mode != UNSET → NOT_UNSET_SKIP
+③ plan not in pricing reference → raise ValueError → _errors.csv
+④ at least one UNSET + plan found → PATCH → PATCHED / DRY_RUN
 ```
 
 ---
@@ -63,12 +62,12 @@ For ordered decision logic, use ① ② ③ ④ (not bullets, not numbered lists
 
 Never write conditional logic as prose. Use a table with labeled outcome column:
 
-| Condition | Evaluate rules? | PATCH curator? | Status |
+| Condition | Evaluate rules? | PATCH billing service? | Status |
 |---|---|---|---|
-| GOBER contract, values match | ✅ | ❌ | `GOBER_SKIP` |
-| Both fields already set | ❌ | ❌ | `NOT_UNSPECIFIED_SKIP` |
-| Package missing from Zeus | ❌ | ❌ | error → `_errors.csv` |
-| At least one UNSPECIFIED + package found | ✅ (observational) | ✅ | `PATCHED` / `DRY_RUN` |
+| LEGACY subscription, values match | ✅ | ❌ | `LEGACY_SKIP` |
+| Both fields already set | ❌ | ❌ | `NOT_UNSET_SKIP` |
+| Plan missing from pricing reference | ❌ | ❌ | error → `_errors.csv` |
+| At least one UNSET + plan found | ✅ (observational) | ✅ | `PATCHED` / `DRY_RUN` |
 
 ---
 
@@ -78,9 +77,9 @@ For multi-layer systems, document the call chain as a table:
 
 | Layer | What happens | Outcome |
 |---|---|---|
-| Hermes Rails | UserInfoConcern#goid_user_info — calls Saudagar::Merchant.find. No retry. | User Object |
-| Ruby Client | Checks MerchantCache → if miss, calls saudagar-ro GET /v1/merchant/:id | JSON or nil |
-| Saudagar-ro | Cache.fetch_by_id → Redis hit returns immediately, miss calls ES | 200 or 4xx/5xx |
+| Web app (Rails) | UserInfoConcern#user_info — calls Directory::Account.find. No retry. | User object |
+| Ruby client | Checks AccountCache → if miss, calls directory-ro GET /v1/accounts/:id | JSON or nil |
+| Directory-ro | Cache.fetch_by_id → Redis hit returns immediately, miss calls the search index | 200 or 4xx/5xx |
 
 ---
 
@@ -95,7 +94,7 @@ Never leave scope implicit. Always add a Non-Goals section:
 - Support resume after interruption via checkpoint
 
 #### Non-Goals
-- Touching payment_settings (out of scope — contracts only)
+- Touching billing_settings (out of scope — subscriptions only)
 - Creating or modifying rules
 - Special handling for addendum vs. primary
 ```
@@ -108,12 +107,12 @@ When multiple solutions exist, present them as a structured table:
 
 | Option | Pros | Cons |
 |---|---|---|
-| A: Drop error, allow nil | Stops login failures for GMA users; removes Saudagar-RO dependency | goresto_id may be nil — harder to debug |
-| B: Fallback to Saudagar Master on failure | Eliminates race condition; master is authoritative | Dual dependency in Hermes-readonly |
-| C: Use Saudagar Master completely | Single authoritative source; simpler call chain | Hits master on ALL normal traffic, not just failures |
+| A: Drop error, allow nil | Stops login failures for some users; removes the directory-ro dependency | account_id may be nil — harder to debug |
+| B: Fallback to the directory primary on failure | Eliminates race condition; primary is authoritative | Dual dependency in the web app |
+| C: Use the directory primary completely | Single authoritative source; simpler call chain | Hits the primary on ALL normal traffic, not just failures |
 
 Then **Decision section at the end** — after all options are visible:
-> "After the final session, we decided to use Saudagar-Master directly..."
+> "After the final session, we decided to use the directory primary directly..."
 
 ---
 
@@ -167,20 +166,20 @@ Never a flat "causes" list. Label explicitly:
 ## Conservative-First Recommendation Pattern
 
 Start conservative, name the trigger to ramp:
-> "Recommendation: open at **4 RPS** on the first live run... Once the first 10K rows complete cleanly, ramp to **12 RPS**. If Wallstreet starts returning 429s, drop --rps rather than restarting."
+> "Recommendation: open at **4 RPS** on the first live run... Once the first 10K rows complete cleanly, ramp to **12 RPS**. If the pricing API starts returning 429s, drop --rps rather than restarting."
 
 ---
 
 ## Pronoun Use in Technical Docs
 
 Unlike IDP (always "I"), technical docs use "we" for shared team decisions:
-- "We decided to use Saudagar-Master directly"
-- "We got a report from the ICP team"
+- "We decided to use the directory primary directly"
+- "We got a report from the support team"
 - But: "I drafted the ADR" / "I manage the rollout" — personal ownership stays "I"
 
 ---
 
-## MR Description Template (Farhan's style)
+## MR Description Template (the author's style)
 
 ```markdown
 ## What
@@ -203,7 +202,7 @@ Unlike IDP (always "I"), technical docs use "we" for shared team decisions:
 
 ## ADR Structure
 
-| Field | Farhan's pattern |
+| Field | the author's pattern |
 |---|---|
 | Status | ACCEPTED / PROPOSED (in code block) |
 | Date | YYYY-MM-DD |

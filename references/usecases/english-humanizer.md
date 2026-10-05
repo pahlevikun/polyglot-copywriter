@@ -159,29 +159,29 @@ Do NOT rewrite. Wait for user to confirm before proceeding.
 
 ---
 
-## When Running as the Always-On Final Pass (on Farhan's own output)
+## When Running as the Always-On Final Pass (on the author's own output)
 
-The pipeline runs the humanize pass on every output. In this context, the goal is narrower: **thin AI patterns that crept in during generation, without touching Farhan's authentic voice markers.**
+The pipeline runs the humanize pass on every output. In this context, the goal is narrower: **thin AI patterns that crept in during generation, without touching the author's authentic voice markers.**
 
-### NEVER remove these — they are Farhan's soul, not AI patterns
+### NEVER remove these — they are the author's soul, not AI patterns
 
 | Pattern | Example | Why it stays |
 |---|---|---|
 | Trademark phrases | "I manage end-to-end", "No one asked me to", "Zero rollback" | Real corpus: IDP docs |
 | MR review patterns | "Can we...?", "bang minor ya, please remove", "right?", "ya?" | Real corpus: 118 GitLab comments |
-| Lark honorifics | "mas @Name", "kak @Name", "Bumping on this" | Real corpus: 111 Lark messages |
+| Lark honorifics | "mas @Name", "kak @Name", "Bumping on this" | Real chat corpus |
 | Modest confidence | "honestly a grind", "not the most exciting but needed" | Voice DNA: effort acknowledgment |
 | Numbers precision | "27 MRs", "5 working days" | Core voice rule: never round |
 
 Do **not** inject old IDP agreement quirks ("it need to happen", "this sprint mark") into new drafts. They confuse a mixed Indo-US reader. New writing uses natural grammar unless the user asks to match a pasted IDP. Em dashes: do not introduce them (SKILL.md Step 2.5).
 
 ### The test before changing anything
-"Does this pattern appear in Farhan's real corpus, and does it still help a mixed Indo-US reader?"
+"Does this pattern appear in the author's real corpus, and does it still help a mixed Indo-US reader?"
 - Honorifics, "Can we...?", numbers, ownership phrases → preserve
 - Old IDP agreement errors → do not copy into new drafts
 - AI glossary / filler transitions → thin if clustering
 
-### What to thin on Farhan's drafts
+### What to thin on the author's drafts
 AI Glossary words, trailing participles, optimism bows, filler transitions, qualifier inflation — anything from the pattern list above that wasn't in the real corpus. Usually a few words per paragraph, not a full rewrite.
 
 ---
@@ -200,7 +200,7 @@ Goal: the result sounds like a **specific person**, not a scrubbed average.
 
 ## Extended noslop catalog
 
-Peer references: [noslop-prose.md](../noslop-prose.md) + [voice-fingerprint.md](../voice-fingerprint.md). The tables below extend the Core Pattern Library above; they do not replace it or each other. Humanize = thin clusters **and** preserve Farhan markers in the same rewrite.
+Peer references: [noslop-prose.md](../noslop-prose.md) + [voice-fingerprint.md](../voice-fingerprint.md). The tables below extend the Core Pattern Library above; they do not replace it or each other. Humanize = thin clusters **and** preserve the author markers in the same rewrite.
 
 ### Symbol hygiene (prose) — collaborate with voice-fingerprint
 
@@ -238,4 +238,4 @@ Boldface overuse; excessive scare quotes; inline-header lists (`- **UX:**`); emo
 
 Do not gut: perfect grammar alone, mixed registers, dry prose, one transition, one short sentence, quoted text. **Look for clusters.**
 
-Preserve: specific odd detail, mixed feelings, era-bound references, varied sentence length, real asides and self-corrections. Do not over-sterilize — keep Farhan markers from "When Running as the Always-On Final Pass" above.
+Preserve: specific odd detail, mixed feelings, era-bound references, varied sentence length, real asides and self-corrections. Do not over-sterilize — keep the author markers from "When Running as the Always-On Final Pass" above.

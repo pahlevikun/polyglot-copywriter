@@ -1,6 +1,6 @@
 # Finnish — language pack
 
-**Status:** `validated`. Write as a careful coworker in Finnish; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Finnish; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

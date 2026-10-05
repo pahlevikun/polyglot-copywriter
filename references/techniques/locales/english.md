@@ -2,7 +2,7 @@
 
 Load when **`language` is `english`**. Base: [languages/english/pack.md](../../languages/english/pack.md), [culture.md](../../languages/english/culture.md). Overlays under [languages/english/overlays/](../../languages/english/overlays/).
 
-**Transcreation** — Register notes for in-en, au, uk overlays — Farhan fingerprint applies by default.
+**Transcreation** — Register notes for in-en, au, uk overlays — the author fingerprint applies by default.
 
 ## Register defaults by use case
 
@@ -19,7 +19,7 @@ Set `regional_voice` from user region name. One overlay at a time.
 
 - Headline: concrete benefit + proof if available
 - One primary CTA; no fabricated stats
-- Register notes for in-en, au, uk overlays — Farhan fingerprint applies by default.
+- Register notes for in-en, au, uk overlays — the author fingerprint applies by default.
 
 | Bad (calque) | Good |
 |---|---|
@@ -64,7 +64,7 @@ Set `regional_voice` from user region name. One overlay at a time.
 | `au` | Australian light markers — avoid caricature |
 | `in-en` | Indian English — formal complete sentences; Hinglish only if explicit |
 
-Farhan fingerprint: [voice-fingerprint.md](../../voice-fingerprint.md). Locale file supplements overlay packs, not core.md.
+the author fingerprint: [voice-fingerprint.md](../../voice-fingerprint.md). Locale file supplements overlay packs, not core.md.
 
 ## Related
 

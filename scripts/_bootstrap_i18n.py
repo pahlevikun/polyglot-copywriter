@@ -44,7 +44,7 @@ STUB_PACK = """# {name} — catalogued
 
 ## Honesty
 
-- Offer `indonesia` or `english` for full Farhan fingerprint output, or ask the user for examples.
+- Offer `indonesia` or `english` for full the author fingerprint output, or ask the user for examples.
 - If the user supplies examples, follow visible patterns in a limited way. Do not fill gaps with invented forms.
 - Planned overlays may be listed in [registry.json](../../registry.json) but are not loaded until status is `beta` or `validated`.
 

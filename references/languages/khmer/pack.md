@@ -1,6 +1,6 @@
 # Khmer — language pack
 
-**Status:** `validated`. Write as a careful coworker in Khmer; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Khmer; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

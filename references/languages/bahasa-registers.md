@@ -1,8 +1,8 @@
-# Bahasa Indonesia Registers — Farhan Yuda Pahlevi
+# Bahasa Indonesia Registers
 
 Maps to `register` in [configuration.md](../configuration.md) and the core rules in [core.md](../core.md):
 
-| Farhan register | Config `register` | When |
+| the author register | Config `register` | When |
 |---|---|---|
 | Formal (Bahasa Baku) | `baku` | letters, B2B, legal, investor — **on request** |
 | Semi-formal | `profesional` | LinkedIn, work email, deck — **on request** |

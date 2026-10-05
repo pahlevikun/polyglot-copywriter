@@ -1,6 +1,6 @@
 # Dayak Ngaju — language pack
 
-**Status:** `validated`. Write as a careful coworker in Dayak Ngaju; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Dayak Ngaju; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

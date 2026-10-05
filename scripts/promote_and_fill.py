@@ -13,7 +13,7 @@ REGISTRY = SKILL_ROOT / "references" / "registry.json"
 
 PACK_HEADER = """# {name} — language pack
 
-**Status:** `validated`. Write as a careful coworker in {name}; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in {name}; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

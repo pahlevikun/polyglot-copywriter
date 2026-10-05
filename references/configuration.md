@@ -42,7 +42,7 @@ farhan_voice:
 - User wrote or asked in English → `english`
 - Mixed, or unclear → match the language of the latest user sentence that is not a quote; if still mixed, ask one question
 
-Farhan's default is casual and simple in **both** languages ([core.md](core.md)). Honorifics `mas`/`kak` still apply in Indonesian work chat, and may appear in mixed internal English chat. External English uses the person's name only. Load [plain-comms.md](usecases/plain-comms.md) only for email, letter, or announcement.
+the author's default is casual and simple in **both** languages ([core.md](core.md)). Honorifics `mas`/`kak` still apply in Indonesian work chat, and may appear in mixed internal English chat. External English uses the person's name only. Load [plain-comms.md](usecases/plain-comms.md) only for email, letter, or announcement.
 
 ### Profiles vs overlay packs
 
@@ -55,7 +55,7 @@ Plain-language aliases that should also load `references/techniques/locales/<lan
 | User says (examples) | `language` | Also load locale technique |
 |---|---|---|
 | 文案, 着陆页, 中文营销, LP Mandarin | `mandarin` | [locales/mandarin.md](techniques/locales/mandarin.md) |
-| iklan, landing page Indonesia, copy Shopee/Tokopedia | `indonesia` | [locales/indonesia.md](techniques/locales/indonesia.md) |
+| iklan, landing page Indonesia, copy marketplace | `indonesia` | [locales/indonesia.md](techniques/locales/indonesia.md) |
 | キャッチコピー, LP 日本語, 日本語マーケ | `japanese` | [locales/japanese.md](techniques/locales/japanese.md) |
 | việt marketing, quảng cáo, email tiếng Việt | `vietnamese` | [locales/vietnamese.md](techniques/locales/vietnamese.md) |
 | copy en español, email en español, Bolivia, Perú, Chile | `spanish` | [locales/spanish.md](techniques/locales/spanish.md) |

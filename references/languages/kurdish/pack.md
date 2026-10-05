@@ -1,6 +1,6 @@
 # Kurdish — language pack
 
-**Status:** `validated`. Write as a careful coworker in Kurdish; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Kurdish; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

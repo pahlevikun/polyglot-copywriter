@@ -57,4 +57,4 @@ Stub: [jp-marketing.md](jp-marketing.md) → [locales/japanese.md#marketing](loc
 | review (development weak) | flow-by-relation | substance + review-prose |
 | any rewrite | natural-writing | optional locale |
 
-Indonesian Farhan voice: [core.md](../core.md) + [voice-fingerprint.md](../voice-fingerprint.md). `english` locale supplements overlay packs; Farhan fingerprint still applies to English by default.
+Indonesian the author voice: [core.md](../core.md) + [voice-fingerprint.md](../voice-fingerprint.md). `english` locale supplements overlay packs; the author fingerprint still applies to English by default.

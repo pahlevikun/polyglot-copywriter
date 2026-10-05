@@ -161,7 +161,7 @@ def main() -> None:
         uc("announcement", ["announce", "FYI team", "channel post", "blast"], "validated", "profesional"),
         uc("chat", ["Lark", "message", "standup", "DM", "thread", "conversation"], "validated", "santai"),
         uc("technical-doc", ["RFC", "ADR", "PRD", "design doc", "architecture", "RCA", "incident doc"], "validated", "profesional"),
-        uc("mr-review", ["MR", "merge request", "code review", "nit", "lgtm", "diff"], "validated", "santai"),
+        uc("glab-code-review", ["glab-mr-review", "MR", "merge request", "code review", "mr-review", "glab mr review", "nit", "lgtm", "diff"], "validated", "santai"),
         uc("peer-review", ["360", "peer feedback", "performance review", "self-assessment"], "validated", "profesional"),
         uc("poetic", ["puitis", "poetic", "lebih liris"], "validated", "santai"),
         uc("humanize", ["humanize", "too AI", "de-AI"], "validated", "santai"),

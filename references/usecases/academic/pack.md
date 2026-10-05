@@ -19,7 +19,7 @@ Summary judgment or main contribution — not flattery opener.
 
 ## Default register
 
-`baku` — no Farhan slang unless user asked.
+`baku` — no the author slang unless user asked.
 
 ## Techniques
 

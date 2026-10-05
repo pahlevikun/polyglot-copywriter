@@ -1,6 +1,6 @@
 # Jawa — language pack
 
-**Status:** `validated`. Write as a careful coworker in Jawa; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Jawa; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

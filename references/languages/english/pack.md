@@ -12,15 +12,15 @@
 
 ## Honesty
 
-Farhan's default English is **Indo-US plain**: US spelling, simple words, complete grammar, no city costume. Regional overlays add colour — do not claim native fluency for `uk`, `singlish`, or `us-slang`.
+the author's default English is **Indo-US plain**: US spelling, simple words, complete grammar, no city costume. Regional overlays add colour — do not claim native fluency for `uk`, `singlish`, or `us-slang`.
 
 ## Default register
 
 `santai` — casual, simple vocab, impact-first. `profesional` and `baku` only on request.
 
-## Farhan fingerprint
+## the author fingerprint
 
-When `language: english` (or user asked to write as Farhan), also load [voice-fingerprint.md](../../voice-fingerprint.md). Other languages use a careful coworker voice, not Farhan markers.
+When `language: english` (or user asked to write as the author), also load [voice-fingerprint.md](../../voice-fingerprint.md). Other languages use a careful coworker voice, not the author markers.
 
 ## When to ask
 

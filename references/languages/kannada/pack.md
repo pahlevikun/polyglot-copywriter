@@ -1,6 +1,6 @@
 # Kannada — language pack
 
-**Status:** `validated`. Write as a careful coworker in Kannada; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Kannada; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

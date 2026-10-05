@@ -1,6 +1,6 @@
 # Assamese — language pack
 
-**Status:** `validated`. Write as a careful coworker in Assamese; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Assamese; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

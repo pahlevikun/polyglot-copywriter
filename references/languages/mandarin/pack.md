@@ -1,6 +1,6 @@
 # Mandarin Chinese — language pack
 
-**Status:** `validated`. Write as a careful coworker in Mandarin Chinese; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Mandarin Chinese; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

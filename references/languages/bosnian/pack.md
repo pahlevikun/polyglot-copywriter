@@ -1,6 +1,6 @@
 # Bosnian — language pack
 
-**Status:** `validated`. Write as a careful coworker in Bosnian; **not** Farhan fingerprint unless user asked English/Indonesian.
+**Status:** `validated`. Write as a careful coworker in Bosnian; **not** the author fingerprint unless user asked English/Indonesian.
 
 ## Load map
 

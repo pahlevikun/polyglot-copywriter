@@ -56,7 +56,7 @@ Before drafting: **what should the reader know or do?** That answer is sentence 
 - Do not start with warmup (“I hope this finds you well”, “Perlu saya sampaikan bahwa”).
 - Do not close with empty offers (“let me know if you have any questions”, “semoga membantu”) unless a real question is open.
 
-Noslop catalog (tone, rhythm, honesty, markdown hygiene): [noslop-prose.md](noslop-prose.md) — apply **together with** [voice-fingerprint.md](voice-fingerprint.md), not instead of it. Same sentence: Farhan's job (voice) + slop-safe form (noslop). Operational humanize loop: [techniques/humanize-workflow.md](techniques/humanize-workflow.md).
+Noslop catalog (tone, rhythm, honesty, markdown hygiene): [noslop-prose.md](noslop-prose.md) — apply **together with** [voice-fingerprint.md](voice-fingerprint.md), not instead of it. Same sentence: the author's job (voice) + slop-safe form (noslop). Operational humanize loop: [techniques/humanize-workflow.md](techniques/humanize-workflow.md).
 
 ## Technique routing
 
@@ -110,7 +110,7 @@ Sample high-traffic triggers (full list in `index.json`):
 | iklan, landing page Indonesia | `indonesia` | [locales/indonesia.md](techniques/locales/indonesia.md) |
 | copy en español, es-bo/pe/cl | `spanish` | [locales/spanish.md](techniques/locales/spanish.md) |
 
-Indonesian Farhan default: [core.md](core.md) + [voice-fingerprint.md](voice-fingerprint.md). `english` locale file supplements overlay packs; Farhan fingerprint still applies to English by default.
+Indonesian the author default: [core.md](core.md) + [voice-fingerprint.md](voice-fingerprint.md). `english` locale file supplements overlay packs; the author fingerprint still applies to English by default.
 
 Legacy stub: [techniques/jp-marketing.md](techniques/jp-marketing.md) → [locales/japanese.md#marketing](techniques/locales/japanese.md#marketing).
 
